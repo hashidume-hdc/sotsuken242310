@@ -22,7 +22,6 @@ Partial Class sarch
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(sarch))
         Me.btn_setting = New System.Windows.Forms.Button()
         Me.btn_account = New System.Windows.Forms.Button()
         Me.btn_trend = New System.Windows.Forms.Button()
@@ -61,9 +60,10 @@ Partial Class sarch
         Me.btn_setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_setting.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_setting.ForeColor = System.Drawing.Color.Black
-        Me.btn_setting.Location = New System.Drawing.Point(50, 332)
+        Me.btn_setting.Location = New System.Drawing.Point(38, 266)
+        Me.btn_setting.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_setting.Name = "btn_setting"
-        Me.btn_setting.Size = New System.Drawing.Size(223, 42)
+        Me.btn_setting.Size = New System.Drawing.Size(167, 34)
         Me.btn_setting.TabIndex = 34
         Me.btn_setting.Text = "設定"
         Me.btn_setting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -76,9 +76,10 @@ Partial Class sarch
         Me.btn_account.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_account.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_account.ForeColor = System.Drawing.Color.Black
-        Me.btn_account.Location = New System.Drawing.Point(50, 281)
+        Me.btn_account.Location = New System.Drawing.Point(38, 225)
+        Me.btn_account.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_account.Name = "btn_account"
-        Me.btn_account.Size = New System.Drawing.Size(223, 42)
+        Me.btn_account.Size = New System.Drawing.Size(167, 34)
         Me.btn_account.TabIndex = 33
         Me.btn_account.Text = "プロフィール"
         Me.btn_account.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -91,9 +92,10 @@ Partial Class sarch
         Me.btn_trend.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_trend.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_trend.ForeColor = System.Drawing.Color.Black
-        Me.btn_trend.Location = New System.Drawing.Point(47, 230)
+        Me.btn_trend.Location = New System.Drawing.Point(35, 184)
+        Me.btn_trend.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_trend.Name = "btn_trend"
-        Me.btn_trend.Size = New System.Drawing.Size(223, 42)
+        Me.btn_trend.Size = New System.Drawing.Size(167, 34)
         Me.btn_trend.TabIndex = 32
         Me.btn_trend.Text = "トレンド"
         Me.btn_trend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -106,9 +108,10 @@ Partial Class sarch
         Me.btn_messege.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_messege.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_messege.ForeColor = System.Drawing.Color.Black
-        Me.btn_messege.Location = New System.Drawing.Point(47, 179)
+        Me.btn_messege.Location = New System.Drawing.Point(35, 143)
+        Me.btn_messege.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_messege.Name = "btn_messege"
-        Me.btn_messege.Size = New System.Drawing.Size(223, 42)
+        Me.btn_messege.Size = New System.Drawing.Size(167, 34)
         Me.btn_messege.TabIndex = 31
         Me.btn_messege.Text = "メッセージ"
         Me.btn_messege.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -121,9 +124,10 @@ Partial Class sarch
         Me.btn_sarch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_sarch.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_sarch.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.btn_sarch.Location = New System.Drawing.Point(47, 128)
+        Me.btn_sarch.Location = New System.Drawing.Point(35, 102)
+        Me.btn_sarch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_sarch.Name = "btn_sarch"
-        Me.btn_sarch.Size = New System.Drawing.Size(223, 42)
+        Me.btn_sarch.Size = New System.Drawing.Size(167, 34)
         Me.btn_sarch.TabIndex = 30
         Me.btn_sarch.Text = "検索"
         Me.btn_sarch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -136,9 +140,10 @@ Partial Class sarch
         Me.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_home.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_home.ForeColor = System.Drawing.Color.Black
-        Me.btn_home.Location = New System.Drawing.Point(47, 77)
+        Me.btn_home.Location = New System.Drawing.Point(35, 62)
+        Me.btn_home.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_home.Name = "btn_home"
-        Me.btn_home.Size = New System.Drawing.Size(223, 42)
+        Me.btn_home.Size = New System.Drawing.Size(167, 34)
         Me.btn_home.TabIndex = 29
         Me.btn_home.Text = "ホーム"
         Me.btn_home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -149,34 +154,38 @@ Partial Class sarch
         Me.hbtk_FlowLayout.BackColor = System.Drawing.Color.White
         Me.hbtk_FlowLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.hbtk_FlowLayout.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.hbtk_FlowLayout.Location = New System.Drawing.Point(276, 77)
+        Me.hbtk_FlowLayout.Location = New System.Drawing.Point(207, 62)
+        Me.hbtk_FlowLayout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.hbtk_FlowLayout.Name = "hbtk_FlowLayout"
-        Me.hbtk_FlowLayout.Size = New System.Drawing.Size(539, 604)
+        Me.hbtk_FlowLayout.Size = New System.Drawing.Size(405, 484)
         Me.hbtk_FlowLayout.TabIndex = 27
         '
         'txt_sarchwrd
         '
         Me.txt_sarchwrd.Font = New System.Drawing.Font("Meiryo UI", 14.0!, System.Drawing.FontStyle.Bold)
         Me.txt_sarchwrd.ForeColor = System.Drawing.Color.Silver
-        Me.txt_sarchwrd.Location = New System.Drawing.Point(347, 36)
+        Me.txt_sarchwrd.Location = New System.Drawing.Point(260, 29)
+        Me.txt_sarchwrd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txt_sarchwrd.Name = "txt_sarchwrd"
-        Me.txt_sarchwrd.Size = New System.Drawing.Size(400, 37)
+        Me.txt_sarchwrd.Size = New System.Drawing.Size(301, 31)
         Me.txt_sarchwrd.TabIndex = 44
         Me.txt_sarchwrd.Text = "検索内容"
         '
         'DateTimePicker
         '
-        Me.DateTimePicker.Location = New System.Drawing.Point(347, 8)
+        Me.DateTimePicker.Location = New System.Drawing.Point(260, 6)
+        Me.DateTimePicker.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DateTimePicker.Name = "DateTimePicker"
-        Me.DateTimePicker.Size = New System.Drawing.Size(139, 22)
+        Me.DateTimePicker.Size = New System.Drawing.Size(105, 19)
         Me.DateTimePicker.TabIndex = 47
         '
         'pic_sarchgo
         '
         Me.pic_sarchgo.Image = Global.tbatter_01.My.Resources.Resources.setting_02
-        Me.pic_sarchgo.Location = New System.Drawing.Point(753, 36)
+        Me.pic_sarchgo.Location = New System.Drawing.Point(565, 29)
+        Me.pic_sarchgo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pic_sarchgo.Name = "pic_sarchgo"
-        Me.pic_sarchgo.Size = New System.Drawing.Size(62, 37)
+        Me.pic_sarchgo.Size = New System.Drawing.Size(46, 30)
         Me.pic_sarchgo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pic_sarchgo.TabIndex = 46
         Me.pic_sarchgo.TabStop = False
@@ -184,9 +193,10 @@ Partial Class sarch
         'pic_sarch_2
         '
         Me.pic_sarch_2.Image = Global.tbatter_01.My.Resources.Resources.sarch
-        Me.pic_sarch_2.Location = New System.Drawing.Point(276, 8)
+        Me.pic_sarch_2.Location = New System.Drawing.Point(207, 6)
+        Me.pic_sarch_2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pic_sarch_2.Name = "pic_sarch_2"
-        Me.pic_sarch_2.Size = New System.Drawing.Size(65, 65)
+        Me.pic_sarch_2.Size = New System.Drawing.Size(49, 52)
         Me.pic_sarch_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pic_sarch_2.TabIndex = 45
         Me.pic_sarch_2.TabStop = False
@@ -195,9 +205,10 @@ Partial Class sarch
         '
         Me.pic_hbtk.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pic_hbtk.Image = Global.tbatter_01.My.Resources.Resources.hbtk
-        Me.pic_hbtk.Location = New System.Drawing.Point(10, 568)
+        Me.pic_hbtk.Location = New System.Drawing.Point(8, 454)
+        Me.pic_hbtk.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pic_hbtk.Name = "pic_hbtk"
-        Me.pic_hbtk.Size = New System.Drawing.Size(110, 110)
+        Me.pic_hbtk.Size = New System.Drawing.Size(82, 88)
         Me.pic_hbtk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pic_hbtk.TabIndex = 43
         Me.pic_hbtk.TabStop = False
@@ -205,9 +216,10 @@ Partial Class sarch
         'pic_setting
         '
         Me.pic_setting.Image = Global.tbatter_01.My.Resources.Resources.setting_02
-        Me.pic_setting.Location = New System.Drawing.Point(10, 332)
+        Me.pic_setting.Location = New System.Drawing.Point(8, 266)
+        Me.pic_setting.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pic_setting.Name = "pic_setting"
-        Me.pic_setting.Size = New System.Drawing.Size(42, 42)
+        Me.pic_setting.Size = New System.Drawing.Size(32, 34)
         Me.pic_setting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pic_setting.TabIndex = 40
         Me.pic_setting.TabStop = False
@@ -215,9 +227,10 @@ Partial Class sarch
         'pic_account
         '
         Me.pic_account.Image = Global.tbatter_01.My.Resources.Resources.unnamed
-        Me.pic_account.Location = New System.Drawing.Point(10, 281)
+        Me.pic_account.Location = New System.Drawing.Point(8, 225)
+        Me.pic_account.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pic_account.Name = "pic_account"
-        Me.pic_account.Size = New System.Drawing.Size(42, 42)
+        Me.pic_account.Size = New System.Drawing.Size(32, 34)
         Me.pic_account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pic_account.TabIndex = 39
         Me.pic_account.TabStop = False
@@ -225,9 +238,10 @@ Partial Class sarch
         'pic_trend
         '
         Me.pic_trend.Image = Global.tbatter_01.My.Resources.Resources.trend_03
-        Me.pic_trend.Location = New System.Drawing.Point(10, 230)
+        Me.pic_trend.Location = New System.Drawing.Point(8, 184)
+        Me.pic_trend.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pic_trend.Name = "pic_trend"
-        Me.pic_trend.Size = New System.Drawing.Size(42, 42)
+        Me.pic_trend.Size = New System.Drawing.Size(32, 34)
         Me.pic_trend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pic_trend.TabIndex = 38
         Me.pic_trend.TabStop = False
@@ -235,9 +249,10 @@ Partial Class sarch
         'pic_message
         '
         Me.pic_message.Image = Global.tbatter_01.My.Resources.Resources.message_031
-        Me.pic_message.Location = New System.Drawing.Point(10, 179)
+        Me.pic_message.Location = New System.Drawing.Point(8, 143)
+        Me.pic_message.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pic_message.Name = "pic_message"
-        Me.pic_message.Size = New System.Drawing.Size(42, 42)
+        Me.pic_message.Size = New System.Drawing.Size(32, 34)
         Me.pic_message.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pic_message.TabIndex = 37
         Me.pic_message.TabStop = False
@@ -245,9 +260,10 @@ Partial Class sarch
         'pic_sarch
         '
         Me.pic_sarch.Image = Global.tbatter_01.My.Resources.Resources.sarch
-        Me.pic_sarch.Location = New System.Drawing.Point(10, 128)
+        Me.pic_sarch.Location = New System.Drawing.Point(8, 102)
+        Me.pic_sarch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pic_sarch.Name = "pic_sarch"
-        Me.pic_sarch.Size = New System.Drawing.Size(42, 42)
+        Me.pic_sarch.Size = New System.Drawing.Size(32, 34)
         Me.pic_sarch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pic_sarch.TabIndex = 36
         Me.pic_sarch.TabStop = False
@@ -255,9 +271,10 @@ Partial Class sarch
         'pic_home
         '
         Me.pic_home.Image = Global.tbatter_01.My.Resources.Resources.home
-        Me.pic_home.Location = New System.Drawing.Point(10, 77)
+        Me.pic_home.Location = New System.Drawing.Point(8, 62)
+        Me.pic_home.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.pic_home.Name = "pic_home"
-        Me.pic_home.Size = New System.Drawing.Size(42, 42)
+        Me.pic_home.Size = New System.Drawing.Size(32, 34)
         Me.pic_home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pic_home.TabIndex = 35
         Me.pic_home.TabStop = False
@@ -265,19 +282,20 @@ Partial Class sarch
         'tbtr_icon
         '
         Me.tbtr_icon.Image = Global.tbatter_01.My.Resources.Resources.tbatter_icon_white
-        Me.tbtr_icon.Location = New System.Drawing.Point(10, 7)
+        Me.tbtr_icon.Location = New System.Drawing.Point(8, 6)
+        Me.tbtr_icon.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.tbtr_icon.Name = "tbtr_icon"
-        Me.tbtr_icon.Size = New System.Drawing.Size(60, 60)
+        Me.tbtr_icon.Size = New System.Drawing.Size(45, 48)
         Me.tbtr_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.tbtr_icon.TabIndex = 28
         Me.tbtr_icon.TabStop = False
         '
         'sarch
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(827, 693)
+        Me.ClientSize = New System.Drawing.Size(620, 554)
         Me.Controls.Add(Me.DateTimePicker)
         Me.Controls.Add(Me.pic_sarchgo)
         Me.Controls.Add(Me.pic_sarch_2)
@@ -297,8 +315,9 @@ Partial Class sarch
         Me.Controls.Add(Me.btn_home)
         Me.Controls.Add(Me.tbtr_icon)
         Me.Controls.Add(Me.hbtk_FlowLayout)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "sarch"
-        Me.Text = resources.GetString("$this.Text")
+        Me.Text = "sS"
         CType(Me.pic_sarchgo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_sarch_2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_hbtk, System.ComponentModel.ISupportInitialize).EndInit()
