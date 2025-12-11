@@ -73,6 +73,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include=".Designer.vb">
+      <DependentUpon>user_frm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="setting.Designer.vb">
       <DependentUpon>setting.vb</DependentUpon>
     </Compile>
@@ -175,6 +182,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="user_frm.resx">
+      <DependentUpon>user_frm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="hbtk_frm.resx">
       <DependentUpon>hbtk_frm.vb</DependentUpon>
     </EmbeddedResource>
