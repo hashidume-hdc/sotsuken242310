@@ -30,6 +30,7 @@ Partial Class Form3
         Me.lbl_Usrname = New System.Windows.Forms.Label()
         Me.pic_Usricon = New System.Windows.Forms.PictureBox()
         Me.hbtk_FlowLayout = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.pic_Usricon, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -55,7 +56,7 @@ Partial Class Form3
         Me.btn_follow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_follow.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_follow.ForeColor = System.Drawing.Color.Black
-        Me.btn_follow.Location = New System.Drawing.Point(357, 36)
+        Me.btn_follow.Location = New System.Drawing.Point(363, 21)
         Me.btn_follow.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_follow.Name = "btn_follow"
         Me.btn_follow.Size = New System.Drawing.Size(94, 34)
@@ -131,12 +132,28 @@ Partial Class Form3
         Me.hbtk_FlowLayout.Size = New System.Drawing.Size(448, 267)
         Me.hbtk_FlowLayout.TabIndex = 52
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(363, 59)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(94, 34)
+        Me.Button1.TabIndex = 60
+        Me.Button1.Text = "メッセージ"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(468, 555)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btn_osusume)
         Me.Controls.Add(Me.btn_follow)
         Me.Controls.Add(Me.lbl_me)
@@ -161,4 +178,5 @@ Partial Class Form3
     Friend WithEvents lbl_Usrname As Label
     Friend WithEvents pic_Usricon As PictureBox
     Friend WithEvents hbtk_FlowLayout As FlowLayoutPanel
+    Friend WithEvents Button1 As Button
 End Class

@@ -77,6 +77,12 @@
       <DependentUpon>user_frm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="tbatter_msg_Control.Designer.vb">
+      <DependentUpon>tbatter_msg_Control.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tbatter_msg_Control.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="user_frm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="tbatter_msg_Control.resx">
+      <DependentUpon>tbatter_msg_Control.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="user_frm.resx">
       <DependentUpon>user_frm.vb</DependentUpon>
     </EmbeddedResource>

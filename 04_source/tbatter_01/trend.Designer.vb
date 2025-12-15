@@ -37,6 +37,7 @@ Partial Class trend
         Me.btn_home = New System.Windows.Forms.Button()
         Me.tbtr_icon = New System.Windows.Forms.PictureBox()
         Me.lbl_trend = New System.Windows.Forms.Label()
+        Me.dgv_trend = New System.Windows.Forms.DataGridView()
         CType(Me.pic_hbtk, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_setting, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_account, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,6 +46,7 @@ Partial Class trend
         CType(Me.pic_sarch, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_home, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbtr_icon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_trend, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pic_hbtk
@@ -52,7 +54,7 @@ Partial Class trend
         Me.pic_hbtk.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pic_hbtk.Image = Global.tbatter_01.My.Resources.Resources.hbtk
         Me.pic_hbtk.Location = New System.Drawing.Point(8, 456)
-        Me.pic_hbtk.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_hbtk.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_hbtk.Name = "pic_hbtk"
         Me.pic_hbtk.Size = New System.Drawing.Size(82, 88)
         Me.pic_hbtk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -63,7 +65,7 @@ Partial Class trend
         '
         Me.pic_setting.Image = Global.tbatter_01.My.Resources.Resources.setting_02
         Me.pic_setting.Location = New System.Drawing.Point(8, 267)
-        Me.pic_setting.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_setting.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_setting.Name = "pic_setting"
         Me.pic_setting.Size = New System.Drawing.Size(32, 34)
         Me.pic_setting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -74,7 +76,7 @@ Partial Class trend
         '
         Me.pic_account.Image = Global.tbatter_01.My.Resources.Resources.unnamed
         Me.pic_account.Location = New System.Drawing.Point(8, 226)
-        Me.pic_account.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_account.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_account.Name = "pic_account"
         Me.pic_account.Size = New System.Drawing.Size(32, 34)
         Me.pic_account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -85,7 +87,7 @@ Partial Class trend
         '
         Me.pic_trend.Image = Global.tbatter_01.My.Resources.Resources.trend_03
         Me.pic_trend.Location = New System.Drawing.Point(8, 186)
-        Me.pic_trend.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_trend.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_trend.Name = "pic_trend"
         Me.pic_trend.Size = New System.Drawing.Size(32, 34)
         Me.pic_trend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -96,7 +98,7 @@ Partial Class trend
         '
         Me.pic_message.Image = Global.tbatter_01.My.Resources.Resources.message_031
         Me.pic_message.Location = New System.Drawing.Point(8, 145)
-        Me.pic_message.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_message.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_message.Name = "pic_message"
         Me.pic_message.Size = New System.Drawing.Size(32, 34)
         Me.pic_message.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -107,7 +109,7 @@ Partial Class trend
         '
         Me.pic_sarch.Image = Global.tbatter_01.My.Resources.Resources.sarch
         Me.pic_sarch.Location = New System.Drawing.Point(8, 104)
-        Me.pic_sarch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_sarch.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_sarch.Name = "pic_sarch"
         Me.pic_sarch.Size = New System.Drawing.Size(32, 34)
         Me.pic_sarch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -118,7 +120,7 @@ Partial Class trend
         '
         Me.pic_home.Image = Global.tbatter_01.My.Resources.Resources.home
         Me.pic_home.Location = New System.Drawing.Point(8, 63)
-        Me.pic_home.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_home.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_home.Name = "pic_home"
         Me.pic_home.Size = New System.Drawing.Size(32, 34)
         Me.pic_home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -133,7 +135,7 @@ Partial Class trend
         Me.btn_setting.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_setting.ForeColor = System.Drawing.Color.Black
         Me.btn_setting.Location = New System.Drawing.Point(38, 267)
-        Me.btn_setting.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_setting.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_setting.Name = "btn_setting"
         Me.btn_setting.Size = New System.Drawing.Size(167, 34)
         Me.btn_setting.TabIndex = 50
@@ -149,7 +151,7 @@ Partial Class trend
         Me.btn_account.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_account.ForeColor = System.Drawing.Color.Black
         Me.btn_account.Location = New System.Drawing.Point(38, 226)
-        Me.btn_account.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_account.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_account.Name = "btn_account"
         Me.btn_account.Size = New System.Drawing.Size(167, 34)
         Me.btn_account.TabIndex = 49
@@ -165,7 +167,7 @@ Partial Class trend
         Me.btn_trend.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_trend.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_trend.Location = New System.Drawing.Point(35, 186)
-        Me.btn_trend.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_trend.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_trend.Name = "btn_trend"
         Me.btn_trend.Size = New System.Drawing.Size(167, 34)
         Me.btn_trend.TabIndex = 48
@@ -181,7 +183,7 @@ Partial Class trend
         Me.btn_messege.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_messege.ForeColor = System.Drawing.Color.Black
         Me.btn_messege.Location = New System.Drawing.Point(35, 145)
-        Me.btn_messege.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_messege.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_messege.Name = "btn_messege"
         Me.btn_messege.Size = New System.Drawing.Size(167, 34)
         Me.btn_messege.TabIndex = 47
@@ -197,7 +199,7 @@ Partial Class trend
         Me.btn_sarch.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_sarch.ForeColor = System.Drawing.Color.Black
         Me.btn_sarch.Location = New System.Drawing.Point(35, 104)
-        Me.btn_sarch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_sarch.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_sarch.Name = "btn_sarch"
         Me.btn_sarch.Size = New System.Drawing.Size(167, 34)
         Me.btn_sarch.TabIndex = 46
@@ -213,7 +215,7 @@ Partial Class trend
         Me.btn_home.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_home.ForeColor = System.Drawing.Color.Black
         Me.btn_home.Location = New System.Drawing.Point(35, 63)
-        Me.btn_home.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_home.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_home.Name = "btn_home"
         Me.btn_home.Size = New System.Drawing.Size(167, 34)
         Me.btn_home.TabIndex = 45
@@ -225,7 +227,7 @@ Partial Class trend
         '
         Me.tbtr_icon.Image = Global.tbatter_01.My.Resources.Resources.tbatter_icon_white
         Me.tbtr_icon.Location = New System.Drawing.Point(8, 7)
-        Me.tbtr_icon.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbtr_icon.Margin = New System.Windows.Forms.Padding(2)
         Me.tbtr_icon.Name = "tbtr_icon"
         Me.tbtr_icon.Size = New System.Drawing.Size(45, 48)
         Me.tbtr_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -243,12 +245,22 @@ Partial Class trend
         Me.lbl_trend.TabIndex = 58
         Me.lbl_trend.Text = "今最も検索されているワード"
         '
+        'dgv_trend
+        '
+        Me.dgv_trend.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_trend.Location = New System.Drawing.Point(208, 52)
+        Me.dgv_trend.Name = "dgv_trend"
+        Me.dgv_trend.RowTemplate.Height = 21
+        Me.dgv_trend.Size = New System.Drawing.Size(341, 492)
+        Me.dgv_trend.TabIndex = 59
+        '
         'trend
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(561, 554)
+        Me.Controls.Add(Me.dgv_trend)
         Me.Controls.Add(Me.lbl_trend)
         Me.Controls.Add(Me.pic_hbtk)
         Me.Controls.Add(Me.pic_setting)
@@ -264,7 +276,7 @@ Partial Class trend
         Me.Controls.Add(Me.btn_sarch)
         Me.Controls.Add(Me.btn_home)
         Me.Controls.Add(Me.tbtr_icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "trend"
         Me.Text = "tbatter_trend"
         CType(Me.pic_hbtk, System.ComponentModel.ISupportInitialize).EndInit()
@@ -275,6 +287,7 @@ Partial Class trend
         CType(Me.pic_sarch, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_home, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbtr_icon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_trend, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -295,4 +308,5 @@ Partial Class trend
     Friend WithEvents btn_home As Button
     Friend WithEvents tbtr_icon As PictureBox
     Friend WithEvents lbl_trend As Label
+    Friend WithEvents dgv_trend As DataGridView
 End Class

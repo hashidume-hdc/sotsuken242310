@@ -3,22 +3,6 @@
   "WorkspaceRootPath": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|c:\\git\\sotsuken242310\\04_source\\tbatter_01\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\hbtk_frm.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:hbtk_frm.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\me.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:me.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\message.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:message.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
@@ -27,7 +11,23 @@
       "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:newuser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\sarch.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\me.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:me.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\hbtk_frm.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:hbtk_frm.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|c:\\git\\sotsuken242310\\04_source\\tbatter_01\\sarch.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:sarch.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
@@ -41,6 +41,13 @@
     {
       "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\trend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:trend.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\user_frm.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|solutionrelative:user_frm.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|tbatter_01||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67E4435F-24E6-4FF4-B444-62A04EE1A8E6}|tbatter_01.vbproj|C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\usrsetting_frm.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
@@ -70,11 +77,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Application.Designer.vb",
               "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\My Project\\Application.Designer.vb",
               "RelativeDocumentMoniker": "My Project\\Application.Designer.vb",
@@ -87,6 +94,30 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "message.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\message.vb",
+              "RelativeDocumentMoniker": "message.vb",
+              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\message.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "RelativeToolTip": "message.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-18T02:48:37.505Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "newUser.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\newUser.vb",
+              "RelativeDocumentMoniker": "newUser.vb",
+              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\newUser.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "RelativeToolTip": "newUser.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-17T00:57:11.756Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
               "Title": "sarch.vb [\u30C7\u30B6\u30A4\u30F3]",
               "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\sarch.vb",
@@ -94,40 +125,7 @@
               "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\sarch.vb [\u30C7\u30B6\u30A4\u30F3]",
               "RelativeToolTip": "sarch.vb [\u30C7\u30B6\u30A4\u30F3]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-18T00:29:39.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "newUser.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\newUser.vb",
-              "RelativeDocumentMoniker": "newUser.vb",
-              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\newUser.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "RelativeToolTip": "newUser.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-17T00:57:11.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "me.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\me.vb",
-              "RelativeDocumentMoniker": "me.vb",
-              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\me.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "RelativeToolTip": "me.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-18T02:49:46.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "home.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\home.vb",
-              "RelativeDocumentMoniker": "home.vb",
-              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\home.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "RelativeToolTip": "home.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-17T01:20:01.628Z",
+              "WhenOpened": "2025-11-18T00:29:39.074Z",
               "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
             },
             {
@@ -139,40 +137,56 @@
               "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\setting.vb [\u30C7\u30B6\u30A4\u30F3]",
               "RelativeToolTip": "setting.vb [\u30C7\u30B6\u30A4\u30F3]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-12-02T01:42:52.423Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "message.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\message.vb",
-              "RelativeDocumentMoniker": "message.vb",
-              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\message.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "RelativeToolTip": "message.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-18T02:48:37.505Z"
+              "WhenOpened": "2025-12-02T01:42:52.423Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "me.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\me.vb",
+              "RelativeDocumentMoniker": "me.vb",
+              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\me.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "RelativeToolTip": "me.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-18T02:49:46.474Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "login.vb [\u30C7\u30B6\u30A4\u30F3]",
               "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\login.vb",
               "RelativeDocumentMoniker": "login.vb",
               "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\login.vb [\u30C7\u30B6\u30A4\u30F3]",
               "RelativeToolTip": "login.vb [\u30C7\u30B6\u30A4\u30F3]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-17T00:44:52.09Z"
+              "WhenOpened": "2025-11-17T00:44:52.09Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "home.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\home.vb",
+              "RelativeDocumentMoniker": "home.vb",
+              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\home.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "RelativeToolTip": "home.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-17T01:20:01.628Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "hbtk_frm.vb [\u30C7\u30B6\u30A4\u30F3]",
               "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\hbtk_frm.vb",
               "RelativeDocumentMoniker": "hbtk_frm.vb",
               "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\hbtk_frm.vb [\u30C7\u30B6\u30A4\u30F3]",
               "RelativeToolTip": "hbtk_frm.vb [\u30C7\u30B6\u30A4\u30F3]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-12-01T00:38:55.536Z"
+              "WhenOpened": "2025-12-01T00:38:55.536Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
             },
             {
               "$type": "Document",
@@ -183,7 +197,8 @@
               "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\tbatter_hbtk_Control.vb [\u30C7\u30B6\u30A4\u30F3]",
               "RelativeToolTip": "tbatter_hbtk_Control.vb [\u30C7\u30B6\u30A4\u30F3]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-17T01:31:20.059Z"
+              "WhenOpened": "2025-11-17T01:31:20.059Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
             },
             {
               "$type": "Document",
@@ -191,14 +206,38 @@
               "Title": "trend.vb [\u30C7\u30B6\u30A4\u30F3]",
               "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\trend.vb",
               "RelativeDocumentMoniker": "trend.vb",
-              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\trend.vb [\u30C7\u30B6\u30A4\u30F3]",
-              "RelativeToolTip": "trend.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\trend.vb [\u30C7\u30B6\u30A4\u30F3]*",
+              "RelativeToolTip": "trend.vb [\u30C7\u30B6\u30A4\u30F3]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-12-01T01:22:35.149Z"
+              "WhenOpened": "2025-12-01T01:22:35.149Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "user_frm.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\user_frm.vb",
+              "RelativeDocumentMoniker": "user_frm.vb",
+              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\user_frm.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "RelativeToolTip": "user_frm.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-12-11T01:11:42.521Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "tbatter_01",
+              "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\tbatter_01.vbproj",
+              "RelativeDocumentMoniker": "tbatter_01.vbproj",
+              "ToolTip": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\tbatter_01.vbproj",
+              "RelativeToolTip": "tbatter_01.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-11T02:40:19.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "usrsetting_frm.vb [\u30C7\u30B6\u30A4\u30F3]",
               "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\usrsetting_frm.vb",
               "RelativeDocumentMoniker": "usrsetting_frm.vb",
@@ -209,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "sarch.vb",
               "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\sarch.vb",
               "RelativeDocumentMoniker": "sarch.vb",
@@ -221,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "newUser.vb",
               "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\newUser.vb",
               "RelativeDocumentMoniker": "newUser.vb",
@@ -229,11 +268,12 @@
               "RelativeToolTip": "newUser.vb",
               "ViewState": "AgIAAAAAAAAAAAAAAAA6wAoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-17T01:14:40.001Z"
+              "WhenOpened": "2025-11-17T01:14:40.001Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "login.vb",
               "DocumentMoniker": "C:\\Git\\sotsuken242310\\04_source\\tbatter_01\\login.vb",
               "RelativeDocumentMoniker": "login.vb",
@@ -241,7 +281,8 @@
               "RelativeToolTip": "login.vb",
               "ViewState": "AgIAAAAAAAAAAAAAAAA6wAcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-17T01:07:34.865Z"
+              "WhenOpened": "2025-11-17T01:07:34.865Z",
+              "EditorCaption": ""
             }
           ]
         }

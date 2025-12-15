@@ -44,3 +44,4 @@ C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.vbproj.CoreCompi
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.exe
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.xml
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.pdb
+C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.Form3.resources

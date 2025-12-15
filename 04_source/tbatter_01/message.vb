@@ -1,3 +1,3 @@
-﻿Public Class message
+﻿Public Class s
 
 End Class
