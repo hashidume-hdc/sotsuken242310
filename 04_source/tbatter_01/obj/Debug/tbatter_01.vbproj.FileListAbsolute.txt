@@ -30,7 +30,6 @@ C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.hbtk_frm.resourc
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.home.resources
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.login.resources
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.Form2.resources
-C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.message.resources
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.user_setting.resources
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.Resources.resources
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.newUser.resources
@@ -45,3 +44,5 @@ C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.exe
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.xml
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.pdb
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.Form3.resources
+C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.tbatter_msg_Control.resources
+C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.s.resources

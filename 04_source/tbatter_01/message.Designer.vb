@@ -29,6 +29,8 @@ Partial Class s
         Me.btn_sarch = New System.Windows.Forms.Button()
         Me.btn_home = New System.Windows.Forms.Button()
         Me.msg_FlowLayout = New System.Windows.Forms.FlowLayoutPanel()
+        Me.txt_msg = New System.Windows.Forms.TextBox()
+        Me.btn_msg = New System.Windows.Forms.Button()
         Me.pic_hbtk = New System.Windows.Forms.PictureBox()
         Me.pic_setting = New System.Windows.Forms.PictureBox()
         Me.pic_account = New System.Windows.Forms.PictureBox()
@@ -37,8 +39,8 @@ Partial Class s
         Me.pic_sarch = New System.Windows.Forms.PictureBox()
         Me.pic_home = New System.Windows.Forms.PictureBox()
         Me.tbtr_icon = New System.Windows.Forms.PictureBox()
-        Me.txt_msg = New System.Windows.Forms.TextBox()
-        Me.btn_msg = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.pic_hbtk, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_setting, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_account, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -150,11 +152,37 @@ Partial Class s
         Me.msg_FlowLayout.BackColor = System.Drawing.Color.White
         Me.msg_FlowLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.msg_FlowLayout.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.msg_FlowLayout.Location = New System.Drawing.Point(232, 7)
+        Me.msg_FlowLayout.Location = New System.Drawing.Point(232, 45)
         Me.msg_FlowLayout.Margin = New System.Windows.Forms.Padding(2)
         Me.msg_FlowLayout.Name = "msg_FlowLayout"
-        Me.msg_FlowLayout.Size = New System.Drawing.Size(328, 497)
+        Me.msg_FlowLayout.Size = New System.Drawing.Size(376, 459)
         Me.msg_FlowLayout.TabIndex = 58
+        '
+        'txt_msg
+        '
+        Me.txt_msg.Font = New System.Drawing.Font("Meiryo UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.txt_msg.ForeColor = System.Drawing.Color.Silver
+        Me.txt_msg.Location = New System.Drawing.Point(232, 512)
+        Me.txt_msg.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_msg.Name = "txt_msg"
+        Me.txt_msg.Size = New System.Drawing.Size(322, 31)
+        Me.txt_msg.TabIndex = 59
+        Me.txt_msg.Text = "メッセージ"
+        '
+        'btn_msg
+        '
+        Me.btn_msg.BackColor = System.Drawing.Color.Black
+        Me.btn_msg.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btn_msg.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_msg.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.btn_msg.ForeColor = System.Drawing.Color.White
+        Me.btn_msg.Location = New System.Drawing.Point(558, 512)
+        Me.btn_msg.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_msg.Name = "btn_msg"
+        Me.btn_msg.Size = New System.Drawing.Size(50, 34)
+        Me.btn_msg.TabIndex = 60
+        Me.btn_msg.Text = "送信"
+        Me.btn_msg.UseVisualStyleBackColor = False
         '
         'pic_hbtk
         '
@@ -245,38 +273,40 @@ Partial Class s
         Me.tbtr_icon.TabIndex = 44
         Me.tbtr_icon.TabStop = False
         '
-        'txt_msg
+        'Button1
         '
-        Me.txt_msg.Font = New System.Drawing.Font("Meiryo UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.txt_msg.ForeColor = System.Drawing.Color.Silver
-        Me.txt_msg.Location = New System.Drawing.Point(232, 512)
-        Me.txt_msg.Margin = New System.Windows.Forms.Padding(2)
-        Me.txt_msg.Name = "txt_msg"
-        Me.txt_msg.Size = New System.Drawing.Size(274, 31)
-        Me.txt_msg.TabIndex = 59
-        Me.txt_msg.Text = "メッセージ"
+        Me.Button1.BackColor = System.Drawing.Color.Black
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(558, 7)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(50, 34)
+        Me.Button1.TabIndex = 62
+        Me.Button1.Text = "検索"
+        Me.Button1.UseVisualStyleBackColor = False
         '
-        'btn_msg
+        'TextBox1
         '
-        Me.btn_msg.BackColor = System.Drawing.Color.Black
-        Me.btn_msg.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.btn_msg.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_msg.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btn_msg.ForeColor = System.Drawing.Color.White
-        Me.btn_msg.Location = New System.Drawing.Point(510, 512)
-        Me.btn_msg.Margin = New System.Windows.Forms.Padding(2)
-        Me.btn_msg.Name = "btn_msg"
-        Me.btn_msg.Size = New System.Drawing.Size(50, 34)
-        Me.btn_msg.TabIndex = 60
-        Me.btn_msg.Text = "送信"
-        Me.btn_msg.UseVisualStyleBackColor = False
+        Me.TextBox1.Font = New System.Drawing.Font("Meiryo UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.TextBox1.ForeColor = System.Drawing.Color.Silver
+        Me.TextBox1.Location = New System.Drawing.Point(232, 7)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(322, 31)
+        Me.TextBox1.TabIndex = 61
+        Me.TextBox1.Text = "ユーザ名"
         '
         's
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(571, 554)
+        Me.ClientSize = New System.Drawing.Size(619, 554)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btn_msg)
         Me.Controls.Add(Me.txt_msg)
         Me.Controls.Add(Me.msg_FlowLayout)
@@ -327,4 +357,6 @@ Partial Class s
     Friend WithEvents msg_FlowLayout As FlowLayoutPanel
     Friend WithEvents txt_msg As TextBox
     Friend WithEvents btn_msg As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox1 As TextBox
 End Class

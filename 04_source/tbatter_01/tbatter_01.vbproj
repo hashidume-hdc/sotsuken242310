@@ -83,6 +83,12 @@
     <Compile Include="tbatter_msg_Control.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="tbatter_hbtk_Control.Designer.vb">
+      <DependentUpon>tbatter_hbtk_Control.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tbatter_hbtk_Control.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="user_frm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -180,16 +186,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="tbatter_hbtk_Control.Designer.vb">
-      <DependentUpon>tbatter_hbtk_Control.vb</DependentUpon>
-    </Compile>
-    <Compile Include="tbatter_hbtk_Control.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="tbatter_msg_Control.resx">
       <DependentUpon>tbatter_msg_Control.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tbatter_hbtk_Control.resx">
+      <DependentUpon>tbatter_hbtk_Control.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_frm.resx">
       <DependentUpon>user_frm.vb</DependentUpon>
@@ -226,9 +229,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="setting.resx">
       <DependentUpon>setting.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="tbatter_hbtk_Control.resx">
-      <DependentUpon>tbatter_hbtk_Control.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="trend.resx">
       <DependentUpon>trend.vb</DependentUpon>

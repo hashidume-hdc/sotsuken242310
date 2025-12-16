@@ -69,7 +69,7 @@ Partial Class tbatter_msg_Control
         Me.Controls.Add(Me.lbl_hbtk_User)
         Me.Controls.Add(Me.Usericon)
         Me.Name = "tbatter_msg_Control"
-        Me.Size = New System.Drawing.Size(243, 68)
+        Me.Size = New System.Drawing.Size(286, 66)
         CType(Me.Usericon, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

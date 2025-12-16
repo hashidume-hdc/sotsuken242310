@@ -30,7 +30,6 @@ Partial Class sarch
         Me.btn_home = New System.Windows.Forms.Button()
         Me.hbtk_FlowLayout = New System.Windows.Forms.FlowLayoutPanel()
         Me.txt_sarchwrd = New System.Windows.Forms.TextBox()
-        Me.pic_sarchgo = New System.Windows.Forms.PictureBox()
         Me.pic_sarch_2 = New System.Windows.Forms.PictureBox()
         Me.pic_hbtk = New System.Windows.Forms.PictureBox()
         Me.pic_setting = New System.Windows.Forms.PictureBox()
@@ -40,7 +39,6 @@ Partial Class sarch
         Me.pic_sarch = New System.Windows.Forms.PictureBox()
         Me.pic_home = New System.Windows.Forms.PictureBox()
         Me.tbtr_icon = New System.Windows.Forms.PictureBox()
-        CType(Me.pic_sarchgo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_sarch_2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_hbtk, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_setting, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -164,28 +162,17 @@ Partial Class sarch
         '
         Me.txt_sarchwrd.Font = New System.Drawing.Font("Meiryo UI", 14.0!, System.Drawing.FontStyle.Bold)
         Me.txt_sarchwrd.ForeColor = System.Drawing.Color.Silver
-        Me.txt_sarchwrd.Location = New System.Drawing.Point(260, 18)
+        Me.txt_sarchwrd.Location = New System.Drawing.Point(207, 18)
         Me.txt_sarchwrd.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_sarchwrd.Name = "txt_sarchwrd"
-        Me.txt_sarchwrd.Size = New System.Drawing.Size(301, 31)
+        Me.txt_sarchwrd.Size = New System.Drawing.Size(349, 31)
         Me.txt_sarchwrd.TabIndex = 44
         Me.txt_sarchwrd.Text = "検索内容"
-        '
-        'pic_sarchgo
-        '
-        Me.pic_sarchgo.Image = Global.tbatter_01.My.Resources.Resources.setting_02
-        Me.pic_sarchgo.Location = New System.Drawing.Point(565, 19)
-        Me.pic_sarchgo.Margin = New System.Windows.Forms.Padding(2)
-        Me.pic_sarchgo.Name = "pic_sarchgo"
-        Me.pic_sarchgo.Size = New System.Drawing.Size(46, 30)
-        Me.pic_sarchgo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pic_sarchgo.TabIndex = 46
-        Me.pic_sarchgo.TabStop = False
         '
         'pic_sarch_2
         '
         Me.pic_sarch_2.Image = Global.tbatter_01.My.Resources.Resources.sarch
-        Me.pic_sarch_2.Location = New System.Drawing.Point(207, 6)
+        Me.pic_sarch_2.Location = New System.Drawing.Point(560, 6)
         Me.pic_sarch_2.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_sarch_2.Name = "pic_sarch_2"
         Me.pic_sarch_2.Size = New System.Drawing.Size(49, 52)
@@ -288,7 +275,6 @@ Partial Class sarch
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(620, 554)
-        Me.Controls.Add(Me.pic_sarchgo)
         Me.Controls.Add(Me.pic_sarch_2)
         Me.Controls.Add(Me.txt_sarchwrd)
         Me.Controls.Add(Me.pic_hbtk)
@@ -309,7 +295,6 @@ Partial Class sarch
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "sarch"
         Me.Text = "sS"
-        CType(Me.pic_sarchgo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_sarch_2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_hbtk, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_setting, System.ComponentModel.ISupportInitialize).EndInit()
@@ -341,5 +326,4 @@ Partial Class sarch
     Friend WithEvents hbtk_FlowLayout As FlowLayoutPanel
     Friend WithEvents txt_sarchwrd As TextBox
     Friend WithEvents pic_sarch_2 As PictureBox
-    Friend WithEvents pic_sarchgo As PictureBox
 End Class
