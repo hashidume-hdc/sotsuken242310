@@ -46,3 +46,10 @@ C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.pdb
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.Form3.resources
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.tbatter_msg_Control.resources
 C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.s.resources
+C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.follow_now.resources
+C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.home_ad.resources
+C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.login_ad.resources
+C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.newUser_ad.resources
+C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.tbatter_user_Control.resources
+C:\Git\sotsuken242310\04_source\tbatter_01\bin\Debug\MySql.Data.dll
+C:\Git\sotsuken242310\04_source\tbatter_01\obj\Debug\tbatter_01.vbproj.Up2Date
