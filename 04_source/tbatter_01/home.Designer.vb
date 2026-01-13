@@ -55,7 +55,7 @@ Partial Class home
         Me.hbtk_FlowLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.hbtk_FlowLayout.ForeColor = System.Drawing.SystemColors.ControlText
         Me.hbtk_FlowLayout.Location = New System.Drawing.Point(208, 45)
-        Me.hbtk_FlowLayout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.hbtk_FlowLayout.Margin = New System.Windows.Forms.Padding(2)
         Me.hbtk_FlowLayout.Name = "hbtk_FlowLayout"
         Me.hbtk_FlowLayout.Size = New System.Drawing.Size(407, 508)
         Me.hbtk_FlowLayout.TabIndex = 0
@@ -68,7 +68,7 @@ Partial Class home
         Me.btn_home.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_home.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_home.Location = New System.Drawing.Point(37, 64)
-        Me.btn_home.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_home.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_home.Name = "btn_home"
         Me.btn_home.Size = New System.Drawing.Size(167, 34)
         Me.btn_home.TabIndex = 11
@@ -84,7 +84,7 @@ Partial Class home
         Me.btn_sarch.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_sarch.ForeColor = System.Drawing.Color.Black
         Me.btn_sarch.Location = New System.Drawing.Point(37, 105)
-        Me.btn_sarch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_sarch.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_sarch.Name = "btn_sarch"
         Me.btn_sarch.Size = New System.Drawing.Size(167, 34)
         Me.btn_sarch.TabIndex = 12
@@ -100,7 +100,7 @@ Partial Class home
         Me.btn_messege.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_messege.ForeColor = System.Drawing.Color.Black
         Me.btn_messege.Location = New System.Drawing.Point(37, 146)
-        Me.btn_messege.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_messege.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_messege.Name = "btn_messege"
         Me.btn_messege.Size = New System.Drawing.Size(167, 34)
         Me.btn_messege.TabIndex = 13
@@ -116,7 +116,7 @@ Partial Class home
         Me.btn_trend.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_trend.ForeColor = System.Drawing.Color.Black
         Me.btn_trend.Location = New System.Drawing.Point(37, 186)
-        Me.btn_trend.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_trend.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_trend.Name = "btn_trend"
         Me.btn_trend.Size = New System.Drawing.Size(167, 34)
         Me.btn_trend.TabIndex = 14
@@ -132,7 +132,7 @@ Partial Class home
         Me.btn_account.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_account.ForeColor = System.Drawing.Color.Black
         Me.btn_account.Location = New System.Drawing.Point(39, 227)
-        Me.btn_account.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_account.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_account.Name = "btn_account"
         Me.btn_account.Size = New System.Drawing.Size(167, 34)
         Me.btn_account.TabIndex = 15
@@ -148,7 +148,7 @@ Partial Class home
         Me.btn_setting.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_setting.ForeColor = System.Drawing.Color.Black
         Me.btn_setting.Location = New System.Drawing.Point(39, 268)
-        Me.btn_setting.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_setting.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_setting.Name = "btn_setting"
         Me.btn_setting.Size = New System.Drawing.Size(167, 34)
         Me.btn_setting.TabIndex = 16
@@ -164,7 +164,7 @@ Partial Class home
         Me.btn_osusume.Font = New System.Drawing.Font("Meiryo UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_osusume.ForeColor = System.Drawing.Color.Black
         Me.btn_osusume.Location = New System.Drawing.Point(208, 6)
-        Me.btn_osusume.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_osusume.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_osusume.Name = "btn_osusume"
         Me.btn_osusume.Size = New System.Drawing.Size(200, 34)
         Me.btn_osusume.TabIndex = 24
@@ -179,7 +179,7 @@ Partial Class home
         Me.btn_follow.Font = New System.Drawing.Font("Meiryo UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_follow.ForeColor = System.Drawing.Color.Black
         Me.btn_follow.Location = New System.Drawing.Point(416, 6)
-        Me.btn_follow.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btn_follow.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_follow.Name = "btn_follow"
         Me.btn_follow.Size = New System.Drawing.Size(200, 34)
         Me.btn_follow.TabIndex = 25
@@ -191,7 +191,7 @@ Partial Class home
         Me.pic_hbtk.Cursor = System.Windows.Forms.Cursors.Hand
         Me.pic_hbtk.Image = Global.tbatter_01.My.Resources.Resources.hbtk
         Me.pic_hbtk.Location = New System.Drawing.Point(9, 457)
-        Me.pic_hbtk.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_hbtk.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_hbtk.Name = "pic_hbtk"
         Me.pic_hbtk.Size = New System.Drawing.Size(82, 88)
         Me.pic_hbtk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -202,7 +202,7 @@ Partial Class home
         '
         Me.pic_setting.Image = Global.tbatter_01.My.Resources.Resources.setting_02
         Me.pic_setting.Location = New System.Drawing.Point(9, 268)
-        Me.pic_setting.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_setting.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_setting.Name = "pic_setting"
         Me.pic_setting.Size = New System.Drawing.Size(32, 34)
         Me.pic_setting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -213,7 +213,7 @@ Partial Class home
         '
         Me.pic_account.Image = Global.tbatter_01.My.Resources.Resources.unnamed
         Me.pic_account.Location = New System.Drawing.Point(9, 227)
-        Me.pic_account.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_account.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_account.Name = "pic_account"
         Me.pic_account.Size = New System.Drawing.Size(32, 34)
         Me.pic_account.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -224,7 +224,7 @@ Partial Class home
         '
         Me.pic_trend.Image = Global.tbatter_01.My.Resources.Resources.trend_03
         Me.pic_trend.Location = New System.Drawing.Point(9, 186)
-        Me.pic_trend.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_trend.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_trend.Name = "pic_trend"
         Me.pic_trend.Size = New System.Drawing.Size(32, 34)
         Me.pic_trend.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -235,7 +235,7 @@ Partial Class home
         '
         Me.pic_message.Image = Global.tbatter_01.My.Resources.Resources.message_031
         Me.pic_message.Location = New System.Drawing.Point(9, 146)
-        Me.pic_message.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_message.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_message.Name = "pic_message"
         Me.pic_message.Size = New System.Drawing.Size(32, 34)
         Me.pic_message.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -246,7 +246,7 @@ Partial Class home
         '
         Me.pic_sarch.Image = Global.tbatter_01.My.Resources.Resources.sarch
         Me.pic_sarch.Location = New System.Drawing.Point(9, 105)
-        Me.pic_sarch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_sarch.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_sarch.Name = "pic_sarch"
         Me.pic_sarch.Size = New System.Drawing.Size(32, 34)
         Me.pic_sarch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -257,7 +257,7 @@ Partial Class home
         '
         Me.pic_home.Image = Global.tbatter_01.My.Resources.Resources.home
         Me.pic_home.Location = New System.Drawing.Point(9, 64)
-        Me.pic_home.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.pic_home.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_home.Name = "pic_home"
         Me.pic_home.Size = New System.Drawing.Size(32, 34)
         Me.pic_home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -268,7 +268,7 @@ Partial Class home
         '
         Me.tbtr_icon.Image = Global.tbatter_01.My.Resources.Resources.tbatter_icon_white
         Me.tbtr_icon.Location = New System.Drawing.Point(9, 8)
-        Me.tbtr_icon.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbtr_icon.Margin = New System.Windows.Forms.Padding(2)
         Me.tbtr_icon.Name = "tbtr_icon"
         Me.tbtr_icon.Size = New System.Drawing.Size(45, 48)
         Me.tbtr_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -298,7 +298,7 @@ Partial Class home
         Me.Controls.Add(Me.btn_home)
         Me.Controls.Add(Me.tbtr_icon)
         Me.Controls.Add(Me.hbtk_FlowLayout)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "home"
         Me.Text = "tbatter_home"
         CType(Me.pic_hbtk, System.ComponentModel.ISupportInitialize).EndInit()

@@ -40,11 +40,10 @@ Partial Class tbatter_hbtk_Control
         '
         'lbl_hbtk
         '
-        Me.lbl_hbtk.AutoSize = True
         Me.lbl_hbtk.Location = New System.Drawing.Point(52, 33)
         Me.lbl_hbtk.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_hbtk.Name = "lbl_hbtk"
-        Me.lbl_hbtk.Size = New System.Drawing.Size(54, 12)
+        Me.lbl_hbtk.Size = New System.Drawing.Size(321, 53)
         Me.lbl_hbtk.TabIndex = 12
         Me.lbl_hbtk.Text = "ここに本文"
         '
@@ -52,7 +51,7 @@ Partial Class tbatter_hbtk_Control
         '
         Me.btn_hbtk_like.Font = New System.Drawing.Font("Meiryo UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_hbtk_like.ForeColor = System.Drawing.Color.Red
-        Me.btn_hbtk_like.Location = New System.Drawing.Point(309, 241)
+        Me.btn_hbtk_like.Location = New System.Drawing.Point(309, 184)
         Me.btn_hbtk_like.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_hbtk_like.Name = "btn_hbtk_like"
         Me.btn_hbtk_like.Size = New System.Drawing.Size(74, 22)
@@ -87,7 +86,7 @@ Partial Class tbatter_hbtk_Control
         '
         Me.btn_comment.Font = New System.Drawing.Font("Meiryo UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_comment.ForeColor = System.Drawing.Color.Gray
-        Me.btn_comment.Location = New System.Drawing.Point(231, 241)
+        Me.btn_comment.Location = New System.Drawing.Point(231, 184)
         Me.btn_comment.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_comment.Name = "btn_comment"
         Me.btn_comment.Size = New System.Drawing.Size(74, 22)
@@ -97,8 +96,7 @@ Partial Class tbatter_hbtk_Control
         '
         'PictureBox4
         '
-        Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox4.Location = New System.Drawing.Point(283, 146)
+        Me.PictureBox4.Location = New System.Drawing.Point(283, 89)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(90, 90)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -107,8 +105,7 @@ Partial Class tbatter_hbtk_Control
         '
         'PictureBox3
         '
-        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Location = New System.Drawing.Point(101, 146)
+        Me.PictureBox3.Location = New System.Drawing.Point(192, 89)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(90, 90)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -117,8 +114,7 @@ Partial Class tbatter_hbtk_Control
         '
         'PictureBox2
         '
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Location = New System.Drawing.Point(192, 146)
+        Me.PictureBox2.Location = New System.Drawing.Point(101, 89)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(90, 90)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -127,15 +123,14 @@ Partial Class tbatter_hbtk_Control
         '
         'PictureBox1
         '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Location = New System.Drawing.Point(10, 146)
+        Me.PictureBox1.Location = New System.Drawing.Point(10, 89)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 59
         Me.PictureBox1.TabStop = False
         '
-        'UserControl1
+        'tbatter_hbtk_Control
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -148,8 +143,8 @@ Partial Class tbatter_hbtk_Control
         Me.Controls.Add(Me.btn_hbtk_like)
         Me.Controls.Add(Me.lbl_hbtk_User)
         Me.Controls.Add(Me.Usericon)
-        Me.Name = "UserControl1"
-        Me.Size = New System.Drawing.Size(385, 265)
+        Me.Name = "tbatter_hbtk_Control"
+        Me.Size = New System.Drawing.Size(394, 213)
         CType(Me.Usericon, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
