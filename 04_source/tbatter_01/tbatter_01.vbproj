@@ -148,10 +148,10 @@
     <Compile Include="usrsetting_frm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="me.Designer.vb">
-      <DependentUpon>me.vb</DependentUpon>
+    <Compile Include="User_mine.Designer.vb">
+      <DependentUpon>User_mine.vb</DependentUpon>
     </Compile>
-    <Compile Include="me.vb">
+    <Compile Include="User_mine.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="message.Designer.vb">
@@ -253,8 +253,8 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="me.resx">
-      <DependentUpon>me.vb</DependentUpon>
+    <EmbeddedResource Include="User_mine.resx">
+      <DependentUpon>User_mine.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="message.resx">
       <DependentUpon>message.vb</DependentUpon>

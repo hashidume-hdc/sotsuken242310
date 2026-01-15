@@ -1,28 +1,34 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Data
 
-Public Class home
+Public Class User_mine
 
-    Private Sub home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private ReadOnly _userId As Integer
 
+    Public Sub New(userId As Integer)
+        InitializeComponent()
+        _userId = userId
+    End Sub
+
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         hbtk_FlowLayout.FlowDirection = FlowDirection.TopDown
         hbtk_FlowLayout.WrapContents = False
         hbtk_FlowLayout.AutoScroll = True
-
-        LoadTimeline()
-
+        LoadUserTimeline()
     End Sub
 
-    Private Sub LoadTimeline()
+    Private Sub LoadUserTimeline()
 
         hbtk_FlowLayout.Controls.Clear()
 
         Dim sql As String =
-    "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
-    "FROM hbtks h " &
-    "LEFT JOIN users u ON h.user_id = u.user_id " &
-    "WHERE h.pare_hbtk_id = 0 AND h.delete_frag = 0 " &
-    "ORDER BY h.hbtk_time DESC"
+            "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
+            "FROM hbtks h " &
+            "LEFT JOIN users u ON h.user_id = u.user_id " &
+            "WHERE h.pare_hbtk_id = 0 " &
+            "AND h.delete_frag = 0 " &
+            "AND h.user_id = @userId " &
+            "ORDER BY h.hbtk_time DESC"
 
         Dim dt As New DataTable
 
@@ -30,11 +36,12 @@ Public Class home
             "Database=sotuken242310;Data Source=localhost;User Id=root")
 
             Using cmd As New MySqlCommand(sql, conn)
+                cmd.Parameters.AddWithValue("@userId", _userId)
+
                 Using da As New MySqlDataAdapter(cmd)
                     da.Fill(dt)
                 End Using
             End Using
-
         End Using
 
         For Each row As DataRow In dt.Rows
@@ -78,23 +85,10 @@ Public Class home
                         list.Add(rdr("image_url").ToString())
                     End While
                 End Using
-
             End Using
         End Using
 
         Return list
     End Function
 
-    Private Sub pic_hbtk_Click(sender As Object, e As EventArgs) Handles pic_hbtk.Click
-        hbtk_frm.Show()
-    End Sub
-
-    Private Sub tbtr_icon_Click(sender As Object, e As EventArgs) Handles tbtr_icon.Click
-        LoadTimeline()
-    End Sub
-
-    Private Sub btn_account_Click(sender As Object, e As EventArgs) Handles btn_account.Click
-        Me.Hide()
-        User_mine.show()
-    End Sub
 End Class
