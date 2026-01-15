@@ -40,10 +40,10 @@ Partial Class tbatter_hbtk_Control
         '
         'lbl_hbtk
         '
-        Me.lbl_hbtk.Location = New System.Drawing.Point(52, 33)
+        Me.lbl_hbtk.Location = New System.Drawing.Point(64, 34)
         Me.lbl_hbtk.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_hbtk.Name = "lbl_hbtk"
-        Me.lbl_hbtk.Size = New System.Drawing.Size(321, 53)
+        Me.lbl_hbtk.Size = New System.Drawing.Size(309, 52)
         Me.lbl_hbtk.TabIndex = 12
         Me.lbl_hbtk.Text = "ここに本文"
         '
@@ -64,7 +64,7 @@ Partial Class tbatter_hbtk_Control
         Me.lbl_hbtk_User.AutoSize = True
         Me.lbl_hbtk_User.Font = New System.Drawing.Font("Meiryo UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_hbtk_User.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.lbl_hbtk_User.Location = New System.Drawing.Point(51, 9)
+        Me.lbl_hbtk_User.Location = New System.Drawing.Point(63, 12)
         Me.lbl_hbtk_User.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_hbtk_User.Name = "lbl_hbtk_User"
         Me.lbl_hbtk_User.Size = New System.Drawing.Size(61, 15)

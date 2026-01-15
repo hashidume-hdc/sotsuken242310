@@ -28,26 +28,41 @@ Public Class tbatter_hbtk_Control
         lbl_hbtk_User.Text = userName
         lbl_hbtk.Text = content
 
-        ' ユーザーアイコン
+        ' ===== ユーザーアイコン（重要修正） =====
+        If Usericon.Image IsNot Nothing Then
+            Usericon.Image.Dispose()
+            Usericon.Image = Nothing
+        End If
+
         If String.IsNullOrEmpty(iconPath) Then
             Usericon.Visible = False
         Else
             Try
-                Usericon.Image = Image.FromFile(iconPath)
+                Using img = Image.FromFile(iconPath)
+                    Usericon.Image = New Bitmap(img)
+                End Using
                 Usericon.SizeMode = PictureBoxSizeMode.Zoom
+                Usericon.Size = New Size(48, 48)
                 Usericon.Visible = True
             Catch
                 Usericon.Visible = False
             End Try
         End If
 
-        ' 投稿画像（最大4枚）
+        ' ===== 投稿画像（最大4枚） =====
         Dim pics = New PictureBox() {PictureBox1, PictureBox2, PictureBox3, PictureBox4}
 
         For i As Integer = 0 To pics.Length - 1
+            If pics(i).Image IsNot Nothing Then
+                pics(i).Image.Dispose()
+                pics(i).Image = Nothing
+            End If
+
             If imageUrls IsNot Nothing AndAlso i < imageUrls.Count Then
                 Try
-                    pics(i).Image = Image.FromFile(imageUrls(i))
+                    Using img = Image.FromFile(imageUrls(i))
+                        pics(i).Image = New Bitmap(img)
+                    End Using
                     pics(i).SizeMode = PictureBoxSizeMode.Zoom
                     pics(i).Visible = True
                 Catch
@@ -58,6 +73,15 @@ Public Class tbatter_hbtk_Control
             End If
         Next
 
-    End Sub
+        With lbl_hbtk_User
+            .AutoSize = True
+            .TextAlign = ContentAlignment.MiddleLeft
+            .Padding = New Padding(0)
+            .Margin = New Padding(0)
+            .BringToFront()
+        End With
 
+        Me.BackColor = Color.WhiteSmoke
+
+    End Sub
 End Class

@@ -32,7 +32,6 @@ Public Class home
             Using cmd As New MySqlCommand(sql, conn)
                 Using da As New MySqlDataAdapter(cmd)
                     da.Fill(dt)
-                    MessageBox.Show("取得件数：" & dt.Rows.Count)
                 End Using
             End Using
 
@@ -45,7 +44,7 @@ Public Class home
             ctl.SetData(
                 CInt(row("hbtk_id")),
                 CInt(row("user_id")),
-                row("user_name").ToString(),
+                "@" & row("user_name").ToString(),
                 row("content").ToString(),
                 row("icon_url").ToString(),
                 GetPostImages(CInt(row("hbtk_id")))
@@ -86,4 +85,11 @@ Public Class home
         Return list
     End Function
 
+    Private Sub pic_hbtk_Click(sender As Object, e As EventArgs) Handles pic_hbtk.Click
+        hbtk_frm.Show()
+    End Sub
+
+    Private Sub tbtr_icon_Click(sender As Object, e As EventArgs) Handles tbtr_icon.Click
+        LoadTimeline()
+    End Sub
 End Class
