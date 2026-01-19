@@ -107,4 +107,14 @@ Public Class home
     Private Sub btn_messege_Click(sender As Object, e As EventArgs) Handles btn_messege.Click
         Me.Hide()
     End Sub
+
+    Private Sub btn_trend_Click(sender As Object, e As EventArgs) Handles btn_trend.Click
+        Me.Hide()
+        trend.Show()
+    End Sub
+
+    Private Sub btn_setting_Click(sender As Object, e As EventArgs) Handles btn_setting.Click
+        Me.Hide()
+        setting.Show()
+    End Sub
 End Class

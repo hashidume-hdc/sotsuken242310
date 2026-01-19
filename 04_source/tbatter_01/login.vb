@@ -63,4 +63,13 @@ Public Class login
         Me.Hide()
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        txt_loginID.Text = "t"
+        txt_loginPswd.Text = "asdf"
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        login_ad.Show()
+    End Sub
 End Class

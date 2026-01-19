@@ -86,6 +86,6 @@ Public Class tbatter_hbtk_Control
     End Sub
 
     Private Sub lbl_hbtk_User_Click(sender As Object, e As EventArgs) Handles lbl_hbtk_User.Click
-
+        Form3.Show()
     End Sub
 End Class

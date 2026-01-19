@@ -27,6 +27,8 @@ Partial Class login_ad
         Me.lbl_border = New System.Windows.Forms.Label()
         Me.btn_login = New System.Windows.Forms.Button()
         Me.lbl_login = New System.Windows.Forms.Label()
+        Me.pic_back = New System.Windows.Forms.PictureBox()
+        CType(Me.pic_back, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txt_loginPswd
@@ -91,12 +93,25 @@ Partial Class login_ad
         Me.lbl_login.TabIndex = 21
         Me.lbl_login.Text = "管理者ログイン"
         '
+        'pic_back
+        '
+        Me.pic_back.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pic_back.Image = Global.tbatter_01.My.Resources.Resources.back
+        Me.pic_back.Location = New System.Drawing.Point(11, 11)
+        Me.pic_back.Margin = New System.Windows.Forms.Padding(2)
+        Me.pic_back.Name = "pic_back"
+        Me.pic_back.Size = New System.Drawing.Size(45, 48)
+        Me.pic_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pic_back.TabIndex = 26
+        Me.pic_back.TabStop = False
+        '
         'login_ad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(461, 309)
+        Me.Controls.Add(Me.pic_back)
         Me.Controls.Add(Me.txt_loginPswd)
         Me.Controls.Add(Me.txt_loginID)
         Me.Controls.Add(Me.lbl_border)
@@ -104,6 +119,7 @@ Partial Class login_ad
         Me.Controls.Add(Me.lbl_login)
         Me.Name = "login_ad"
         Me.Text = "Form5"
+        CType(Me.pic_back, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -114,4 +130,5 @@ Partial Class login_ad
     Friend WithEvents lbl_border As Label
     Friend WithEvents btn_login As Button
     Friend WithEvents lbl_login As Label
+    Friend WithEvents pic_back As PictureBox
 End Class

@@ -167,7 +167,7 @@ Partial Class User_mine
         '
         Me.lbl_Usrname.AutoSize = True
         Me.lbl_Usrname.Font = New System.Drawing.Font("Meiryo UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lbl_Usrname.Location = New System.Drawing.Point(272, 34)
+        Me.lbl_Usrname.Location = New System.Drawing.Point(278, 31)
         Me.lbl_Usrname.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_Usrname.Name = "lbl_Usrname"
         Me.lbl_Usrname.Size = New System.Drawing.Size(195, 41)
@@ -216,7 +216,7 @@ Partial Class User_mine
         Me.btn_acount_setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_acount_setting.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_acount_setting.ForeColor = System.Drawing.Color.Black
-        Me.btn_acount_setting.Location = New System.Drawing.Point(538, 45)
+        Me.btn_acount_setting.Location = New System.Drawing.Point(538, 40)
         Me.btn_acount_setting.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_acount_setting.Name = "btn_acount_setting"
         Me.btn_acount_setting.Size = New System.Drawing.Size(76, 34)
