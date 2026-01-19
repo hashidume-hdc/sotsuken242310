@@ -84,4 +84,8 @@ Public Class tbatter_hbtk_Control
         Me.BackColor = Color.WhiteSmoke
 
     End Sub
+
+    Private Sub lbl_hbtk_User_Click(sender As Object, e As EventArgs) Handles lbl_hbtk_User.Click
+
+    End Sub
 End Class

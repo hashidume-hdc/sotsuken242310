@@ -3,17 +3,18 @@ Imports System.Data
 
 Public Class User_mine
 
-    Private ReadOnly _userId As Integer
+    Private Sub User_mine_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    Public Sub New(userId As Integer)
-        InitializeComponent()
-        _userId = userId
-    End Sub
+        If Session.CurrentUserId = 0 Then
+            MessageBox.Show("ログイン情報がありません")
+            Me.Close()
+            Exit Sub
+        End If
 
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         hbtk_FlowLayout.FlowDirection = FlowDirection.TopDown
         hbtk_FlowLayout.WrapContents = False
         hbtk_FlowLayout.AutoScroll = True
+
         LoadUserTimeline()
     End Sub
 
@@ -36,7 +37,7 @@ Public Class User_mine
             "Database=sotuken242310;Data Source=localhost;User Id=root")
 
             Using cmd As New MySqlCommand(sql, conn)
-                cmd.Parameters.AddWithValue("@userId", _userId)
+                cmd.Parameters.AddWithValue("@userId", Session.CurrentUserId)
 
                 Using da As New MySqlDataAdapter(cmd)
                     da.Fill(dt)
@@ -45,7 +46,6 @@ Public Class User_mine
         End Using
 
         For Each row As DataRow In dt.Rows
-
             Dim ctl As New tbatter_hbtk_Control()
 
             ctl.SetData(
@@ -59,25 +59,19 @@ Public Class User_mine
 
             ctl.Width = hbtk_FlowLayout.ClientSize.Width - 20
             hbtk_FlowLayout.Controls.Add(ctl)
-
         Next
-
     End Sub
 
     Private Function GetPostImages(hbtkId As Integer) As List(Of String)
-
         Dim list As New List(Of String)
-
-        Dim sql As String =
-            "SELECT image_url FROM post_images " &
-            "WHERE hbtk_id = @hbtkId " &
-            "ORDER BY sort_order"
 
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
 
-            Using cmd As New MySqlCommand(sql, conn)
-                cmd.Parameters.AddWithValue("@hbtkId", hbtkId)
+            Using cmd As New MySqlCommand(
+                "SELECT image_url FROM post_images WHERE hbtk_id=@id ORDER BY sort_order", conn)
+
+                cmd.Parameters.AddWithValue("@id", hbtkId)
                 conn.Open()
 
                 Using rdr = cmd.ExecuteReader()
@@ -91,4 +85,7 @@ Public Class User_mine
         Return list
     End Function
 
+    Private Sub btn_acount_setting_Click(sender As Object, e As EventArgs) Handles btn_acount_setting.Click
+        usrsetting_frm.Show()
+    End Sub
 End Class

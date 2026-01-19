@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports Microsoft.VisualBasic.ApplicationServices
+Imports MySql.Data.MySqlClient
 Imports System.Data
 
 Public Class home
@@ -95,6 +96,15 @@ Public Class home
 
     Private Sub btn_account_Click(sender As Object, e As EventArgs) Handles btn_account.Click
         Me.Hide()
-        User_mine.show()
+        User_mine.Show()
+    End Sub
+
+    Private Sub btn_sarch_Click(sender As Object, e As EventArgs) Handles btn_sarch.Click
+        Me.Hide()
+        sarch.Show()
+    End Sub
+
+    Private Sub btn_messege_Click(sender As Object, e As EventArgs) Handles btn_messege.Click
+        Me.Hide()
     End Sub
 End Class
