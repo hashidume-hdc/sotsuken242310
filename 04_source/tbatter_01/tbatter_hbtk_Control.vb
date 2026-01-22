@@ -8,6 +8,9 @@ Public Class tbatter_hbtk_Control
     Public Property HbtkId As Integer
     Public Property UserId As Integer
 
+    ' ===== コメント要求イベント =====
+    Public Event CommentRequested(hbtkId As Integer)
+
     Public Sub New()
         InitializeComponent()
         Me.AutoSize = True
@@ -50,7 +53,7 @@ Public Class tbatter_hbtk_Control
             End Try
         End If
 
-        ' ===== 投稿画像（最大4枚） =====
+        ' ===== 投稿画像 =====
         Dim pics = New PictureBox() {PictureBox1, PictureBox2, PictureBox3, PictureBox4}
 
         For i As Integer = 0 To pics.Length - 1
@@ -74,32 +77,19 @@ Public Class tbatter_hbtk_Control
             End If
         Next
 
-        With lbl_hbtk_User
-            .AutoSize = True
-            .TextAlign = ContentAlignment.MiddleLeft
-            .Padding = New Padding(0)
-            .Margin = New Padding(0)
-            .BringToFront()
-        End With
-
         ' ===== 自分の投稿はクリック不可 =====
         If Me.UserId = Session.CurrentUserId Then
             lbl_hbtk_User.Enabled = False
-            lbl_hbtk_User.Cursor = Cursors.Default
             lbl_hbtk_User.ForeColor = Color.Gray
         Else
             lbl_hbtk_User.Enabled = True
             lbl_hbtk_User.Cursor = Cursors.Hand
         End If
 
-        ' ===== いいね状態を反映 =====
         ApplyLikeState()
-
-        Me.BackColor = Color.WhiteSmoke
-
     End Sub
 
-    ' ===== ユーザー名クリック（他人のみ） =====
+    ' ===== ユーザー名クリック =====
     Private Sub lbl_hbtk_User_Click(sender As Object, e As EventArgs) _
         Handles lbl_hbtk_User.Click
 
@@ -108,17 +98,19 @@ Public Class tbatter_hbtk_Control
 
     End Sub
 
-    ' ===== いいねボタン（トグル） =====
+    ' ===== コメントボタン =====
+    Private Sub btn_comment_Click(sender As Object, e As EventArgs) _
+        Handles btn_comment.Click
+
+        RaiseEvent CommentRequested(Me.HbtkId)
+
+    End Sub
+
+    ' ===== いいね =====
     Private Sub btn_hbtk_like_Click(sender As Object, e As EventArgs) _
         Handles btn_hbtk_like.Click
 
-        If Session.CurrentUserId = 0 Then
-            MessageBox.Show("ログインしてください",
-                            "エラー",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error)
-            Exit Sub
-        End If
+        If Session.CurrentUserId = 0 Then Exit Sub
 
         If IsLikedByCurrentUser() Then
             RemoveLike()
@@ -127,12 +119,9 @@ Public Class tbatter_hbtk_Control
         End If
 
         ApplyLikeState()
-
     End Sub
 
-    ' ===== いいね状態UI反映 =====
     Private Sub ApplyLikeState()
-
         If IsLikedByCurrentUser() Then
             btn_hbtk_like.Text = "♥"
             btn_hbtk_like.BackColor = Color.Pink
@@ -140,66 +129,53 @@ Public Class tbatter_hbtk_Control
             btn_hbtk_like.Text = "♡"
             btn_hbtk_like.BackColor = SystemColors.Control
         End If
-
     End Sub
 
-    ' ===== いいね追加 =====
     Private Sub AddLike()
-
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
-
             Using cmd As New MySqlCommand(
-                "INSERT INTO likes (user_id, hbtk_id) VALUES (@uid, @hid)", conn)
-
-                cmd.Parameters.AddWithValue("@uid", Session.CurrentUserId)
-                cmd.Parameters.AddWithValue("@hid", Me.HbtkId)
-
+                "INSERT INTO likes (user_id, hbtk_id) VALUES (@u,@h)", conn)
+                cmd.Parameters.AddWithValue("@u", Session.CurrentUserId)
+                cmd.Parameters.AddWithValue("@h", Me.HbtkId)
                 conn.Open()
                 cmd.ExecuteNonQuery()
             End Using
         End Using
-
     End Sub
 
-    ' ===== いいね解除 =====
     Private Sub RemoveLike()
-
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
-
             Using cmd As New MySqlCommand(
-                "DELETE FROM likes WHERE user_id=@uid AND hbtk_id=@hid", conn)
-
-                cmd.Parameters.AddWithValue("@uid", Session.CurrentUserId)
-                cmd.Parameters.AddWithValue("@hid", Me.HbtkId)
-
+                "DELETE FROM likes WHERE user_id=@u AND hbtk_id=@h", conn)
+                cmd.Parameters.AddWithValue("@u", Session.CurrentUserId)
+                cmd.Parameters.AddWithValue("@h", Me.HbtkId)
                 conn.Open()
                 cmd.ExecuteNonQuery()
             End Using
         End Using
-
     End Sub
 
-    ' ===== いいね済み判定 =====
     Private Function IsLikedByCurrentUser() As Boolean
-
         If Session.CurrentUserId = 0 Then Return False
 
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
-
             Using cmd As New MySqlCommand(
-                "SELECT 1 FROM likes WHERE user_id=@uid AND hbtk_id=@hid LIMIT 1", conn)
-
-                cmd.Parameters.AddWithValue("@uid", Session.CurrentUserId)
-                cmd.Parameters.AddWithValue("@hid", Me.HbtkId)
-
+                "SELECT 1 FROM likes WHERE user_id=@u AND hbtk_id=@h LIMIT 1", conn)
+                cmd.Parameters.AddWithValue("@u", Session.CurrentUserId)
+                cmd.Parameters.AddWithValue("@h", Me.HbtkId)
                 conn.Open()
                 Return cmd.ExecuteScalar() IsNot Nothing
             End Using
         End Using
-
     End Function
+    Public Sub SetAsComment()
+
+        lbl_hbtk_User.ForeColor = Color.Green
+        Me.BackColor = Color.FromArgb(235, 255, 235)
+
+    End Sub
 
 End Class

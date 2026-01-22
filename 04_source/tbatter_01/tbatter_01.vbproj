@@ -84,6 +84,12 @@
     <Compile Include="follow_now.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="comment_frm.Designer.vb">
+      <DependentUpon>comment_frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="comment_frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Session.vb" />
     <Compile Include="newUser_ad.Designer.vb">
       <DependentUpon>newUser_ad.vb</DependentUpon>
@@ -160,18 +166,6 @@
     <Compile Include="message.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="My Project\Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Form3.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="My Project\Form4.Designer.vb">
-      <DependentUpon>Form4.vb</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Form4.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="sarch.Designer.vb">
       <DependentUpon>sarch.vb</DependentUpon>
     </Compile>
@@ -220,6 +214,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="comment_frm.resx">
+      <DependentUpon>comment_frm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="follow_now.resx">
       <DependentUpon>follow_now.vb</DependentUpon>
     </EmbeddedResource>
@@ -258,9 +255,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="message.resx">
       <DependentUpon>message.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="My Project\Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

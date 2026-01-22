@@ -1,46 +1,84 @@
-﻿Imports Microsoft.VisualBasic.ApplicationServices
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 Imports System.Data
 
 Public Class home
 
-    Private Sub home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private currentCommentParentId As Integer = 0
 
+    Private Sub home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         hbtk_FlowLayout.FlowDirection = FlowDirection.TopDown
         hbtk_FlowLayout.WrapContents = False
         hbtk_FlowLayout.AutoScroll = True
-
         LoadTimeline()
-
     End Sub
 
     Private Sub LoadTimeline()
-
         hbtk_FlowLayout.Controls.Clear()
 
+        If currentCommentParentId = 0 Then
+            LoadNormalTimeline()
+        Else
+            LoadCommentTimeline(currentCommentParentId)
+        End If
+    End Sub
+
+    ' ===== 通常タイムライン =====
+    Private Sub LoadNormalTimeline()
+
         Dim sql As String =
-    "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
-    "FROM hbtks h " &
-    "LEFT JOIN users u ON h.user_id = u.user_id " &
-    "WHERE h.pare_hbtk_id = 0 AND h.delete_frag = 0 " &
-    "ORDER BY h.hbtk_time DESC"
+            "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
+            "FROM hbtks h " &
+            "LEFT JOIN users u ON h.user_id = u.user_id " &
+            "WHERE h.pare_hbtk_id = 0 AND h.delete_frag = 0 " &
+            "ORDER BY h.hbtk_time DESC"
+
+        LoadPosts(sql, Nothing, False)
+
+    End Sub
+
+    ' ===== 親＋コメント =====
+    Private Sub LoadCommentTimeline(parentId As Integer)
+
+        ' 親投稿
+        LoadPosts(
+            "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
+            "FROM hbtks h LEFT JOIN users u ON h.user_id=u.user_id " &
+            "WHERE h.hbtk_id=@id AND h.delete_frag=0",
+            parentId,
+            False)
+
+        ' コメント
+        LoadPosts(
+            "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
+            "FROM hbtks h LEFT JOIN users u ON h.user_id=u.user_id " &
+            "WHERE h.pare_hbtk_id=@id AND h.delete_frag=0 " &
+            "ORDER BY h.hbtk_time ASC",
+            parentId,
+            True)
+
+    End Sub
+
+    ' ===== 共通描画 =====
+    Private Sub LoadPosts(sql As String, id As Integer?, indent As Boolean)
 
         Dim dt As New DataTable
 
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
-
             Using cmd As New MySqlCommand(sql, conn)
+                If id.HasValue Then
+                    cmd.Parameters.AddWithValue("@id", id.Value)
+                End If
                 Using da As New MySqlDataAdapter(cmd)
                     da.Fill(dt)
                 End Using
             End Using
-
         End Using
 
         For Each row As DataRow In dt.Rows
 
             Dim ctl As New tbatter_hbtk_Control()
+            AddHandler ctl.CommentRequested, AddressOf OnCommentRequested
 
             ctl.SetData(
                 CInt(row("hbtk_id")),
@@ -52,52 +90,61 @@ Public Class home
             )
 
             ctl.Width = hbtk_FlowLayout.ClientSize.Width - 20
-            hbtk_FlowLayout.Controls.Add(ctl)
 
+            If indent Then
+                ctl.SetAsComment()
+            End If
+
+            hbtk_FlowLayout.Controls.Add(ctl)
         Next
 
     End Sub
 
+    Private Sub OnCommentRequested(hbtkId As Integer)
+
+        Using frm As New comment_frm(hbtkId)
+            If frm.ShowDialog() = DialogResult.OK Then
+                currentCommentParentId = hbtkId
+                LoadTimeline()
+            End If
+        End Using
+
+    End Sub
+
+
     Private Function GetPostImages(hbtkId As Integer) As List(Of String)
-
         Dim list As New List(Of String)
-
-        Dim sql As String =
-            "SELECT image_url FROM post_images " &
-            "WHERE hbtk_id = @hbtkId " &
-            "ORDER BY sort_order"
 
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
-
-            Using cmd As New MySqlCommand(sql, conn)
-                cmd.Parameters.AddWithValue("@hbtkId", hbtkId)
+            Using cmd As New MySqlCommand(
+                "SELECT image_url FROM post_images WHERE hbtk_id=@id ORDER BY sort_order", conn)
+                cmd.Parameters.AddWithValue("@id", hbtkId)
                 conn.Open()
-
                 Using rdr = cmd.ExecuteReader()
                     While rdr.Read()
                         list.Add(rdr("image_url").ToString())
                     End While
                 End Using
-
             End Using
         End Using
 
         Return list
     End Function
+
+    ' ===== 戻る =====
+    Private Sub tbtr_icon_Click(sender As Object, e As EventArgs) Handles tbtr_icon.Click
+        currentCommentParentId = 0
+        LoadTimeline()
+    End Sub
+
     Private Sub home_Activated(sender As Object, e As EventArgs) _
     Handles Me.Activated
-
         LoadTimeline()
-
     End Sub
 
     Private Sub pic_hbtk_Click(sender As Object, e As EventArgs) Handles pic_hbtk.Click
         hbtk_frm.Show()
-    End Sub
-
-    Private Sub tbtr_icon_Click(sender As Object, e As EventArgs) Handles tbtr_icon.Click
-        LoadTimeline()
     End Sub
 
     Private Sub btn_account_Click(sender As Object, e As EventArgs) Handles btn_account.Click
