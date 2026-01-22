@@ -85,6 +85,12 @@ Public Class home
 
         Return list
     End Function
+    Private Sub home_Activated(sender As Object, e As EventArgs) _
+    Handles Me.Activated
+
+        LoadTimeline()
+
+    End Sub
 
     Private Sub pic_hbtk_Click(sender As Object, e As EventArgs) Handles pic_hbtk.Click
         hbtk_frm.Show()

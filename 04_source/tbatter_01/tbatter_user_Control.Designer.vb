@@ -54,6 +54,7 @@ Partial Class tbatter_user_Control
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.Controls.Add(Me.lbl_hbtk_User)
         Me.Controls.Add(Me.Usericon)
         Me.Name = "tbatter_user_Control"

@@ -34,8 +34,8 @@ Partial Class User_mine
         Me.lbl_follow_people = New System.Windows.Forms.Label()
         Me.lbl_me = New System.Windows.Forms.Label()
         Me.btn_acount_setting = New System.Windows.Forms.Button()
-        Me.btn_follow = New System.Windows.Forms.Button()
-        Me.btn_osusume = New System.Windows.Forms.Button()
+        Me.btn_hbtk_like = New System.Windows.Forms.Button()
+        Me.btn_hbtk_me = New System.Windows.Forms.Button()
         Me.pic_Usricon = New System.Windows.Forms.PictureBox()
         Me.pic_hbtk = New System.Windows.Forms.PictureBox()
         Me.pic_setting = New System.Windows.Forms.PictureBox()
@@ -207,7 +207,7 @@ Partial Class User_mine
         Me.lbl_me.Name = "lbl_me"
         Me.lbl_me.Size = New System.Drawing.Size(410, 132)
         Me.lbl_me.TabIndex = 48
-        Me.lbl_me.Text = "自己紹介文"
+        Me.lbl_me.Text = "本文"
         '
         'btn_acount_setting
         '
@@ -224,35 +224,35 @@ Partial Class User_mine
         Me.btn_acount_setting.Text = "編集"
         Me.btn_acount_setting.UseVisualStyleBackColor = False
         '
-        'btn_follow
+        'btn_hbtk_like
         '
-        Me.btn_follow.BackColor = System.Drawing.Color.White
-        Me.btn_follow.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btn_follow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_follow.Font = New System.Drawing.Font("Meiryo UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btn_follow.ForeColor = System.Drawing.Color.Black
-        Me.btn_follow.Location = New System.Drawing.Point(414, 245)
-        Me.btn_follow.Margin = New System.Windows.Forms.Padding(2)
-        Me.btn_follow.Name = "btn_follow"
-        Me.btn_follow.Size = New System.Drawing.Size(200, 34)
-        Me.btn_follow.TabIndex = 51
-        Me.btn_follow.Text = "いいね"
-        Me.btn_follow.UseVisualStyleBackColor = False
+        Me.btn_hbtk_like.BackColor = System.Drawing.Color.White
+        Me.btn_hbtk_like.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_hbtk_like.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_hbtk_like.Font = New System.Drawing.Font("Meiryo UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.btn_hbtk_like.ForeColor = System.Drawing.Color.Black
+        Me.btn_hbtk_like.Location = New System.Drawing.Point(414, 245)
+        Me.btn_hbtk_like.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_hbtk_like.Name = "btn_hbtk_like"
+        Me.btn_hbtk_like.Size = New System.Drawing.Size(200, 34)
+        Me.btn_hbtk_like.TabIndex = 51
+        Me.btn_hbtk_like.Text = "いいね"
+        Me.btn_hbtk_like.UseVisualStyleBackColor = False
         '
-        'btn_osusume
+        'btn_hbtk_me
         '
-        Me.btn_osusume.BackColor = System.Drawing.Color.White
-        Me.btn_osusume.FlatAppearance.BorderColor = System.Drawing.Color.White
-        Me.btn_osusume.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_osusume.Font = New System.Drawing.Font("Meiryo UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btn_osusume.ForeColor = System.Drawing.Color.Black
-        Me.btn_osusume.Location = New System.Drawing.Point(207, 245)
-        Me.btn_osusume.Margin = New System.Windows.Forms.Padding(2)
-        Me.btn_osusume.Name = "btn_osusume"
-        Me.btn_osusume.Size = New System.Drawing.Size(200, 34)
-        Me.btn_osusume.TabIndex = 50
-        Me.btn_osusume.Text = "はばたき"
-        Me.btn_osusume.UseVisualStyleBackColor = False
+        Me.btn_hbtk_me.BackColor = System.Drawing.Color.White
+        Me.btn_hbtk_me.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.btn_hbtk_me.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_hbtk_me.Font = New System.Drawing.Font("Meiryo UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.btn_hbtk_me.ForeColor = System.Drawing.Color.Black
+        Me.btn_hbtk_me.Location = New System.Drawing.Point(207, 245)
+        Me.btn_hbtk_me.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_hbtk_me.Name = "btn_hbtk_me"
+        Me.btn_hbtk_me.Size = New System.Drawing.Size(200, 34)
+        Me.btn_hbtk_me.TabIndex = 50
+        Me.btn_hbtk_me.Text = "はばたき"
+        Me.btn_hbtk_me.UseVisualStyleBackColor = False
         '
         'pic_Usricon
         '
@@ -360,8 +360,8 @@ Partial Class User_mine
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(622, 554)
-        Me.Controls.Add(Me.btn_follow)
-        Me.Controls.Add(Me.btn_osusume)
+        Me.Controls.Add(Me.btn_hbtk_like)
+        Me.Controls.Add(Me.btn_hbtk_me)
         Me.Controls.Add(Me.btn_acount_setting)
         Me.Controls.Add(Me.lbl_me)
         Me.Controls.Add(Me.lbl_follow_people)
@@ -421,6 +421,6 @@ Partial Class User_mine
     Friend WithEvents lbl_follow_people As Label
     Friend WithEvents lbl_me As Label
     Friend WithEvents btn_acount_setting As Button
-    Friend WithEvents btn_follow As Button
-    Friend WithEvents btn_osusume As Button
+    Friend WithEvents btn_hbtk_like As Button
+    Friend WithEvents btn_hbtk_me As Button
 End Class

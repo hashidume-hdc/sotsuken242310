@@ -62,7 +62,7 @@ Partial Class tbatter_hbtk_Control
         'lbl_hbtk_User
         '
         Me.lbl_hbtk_User.AutoSize = True
-        Me.lbl_hbtk_User.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.lbl_hbtk_User.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lbl_hbtk_User.Font = New System.Drawing.Font("Meiryo UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_hbtk_User.ForeColor = System.Drawing.Color.RoyalBlue
         Me.lbl_hbtk_User.Location = New System.Drawing.Point(63, 12)

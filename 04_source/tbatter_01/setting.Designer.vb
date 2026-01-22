@@ -179,7 +179,7 @@ Partial Class setting
         Me.btn_setting.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_setting.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btn_setting.ForeColor = System.Drawing.Color.Black
+        Me.btn_setting.ForeColor = System.Drawing.Color.DeepSkyBlue
         Me.btn_setting.Location = New System.Drawing.Point(37, 267)
         Me.btn_setting.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_setting.Name = "btn_setting"
@@ -243,7 +243,7 @@ Partial Class setting
         Me.btn_sarch.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btn_sarch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_sarch.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btn_sarch.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.btn_sarch.ForeColor = System.Drawing.Color.Black
         Me.btn_sarch.Location = New System.Drawing.Point(34, 103)
         Me.btn_sarch.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_sarch.Name = "btn_sarch"

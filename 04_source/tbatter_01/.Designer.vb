@@ -41,7 +41,7 @@ Partial Class Form3
         Me.btn_osusume.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_osusume.Font = New System.Drawing.Font("Meiryo UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_osusume.ForeColor = System.Drawing.Color.Black
-        Me.btn_osusume.Location = New System.Drawing.Point(136, 241)
+        Me.btn_osusume.Location = New System.Drawing.Point(120, 241)
         Me.btn_osusume.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_osusume.Name = "btn_osusume"
         Me.btn_osusume.Size = New System.Drawing.Size(200, 34)
@@ -56,10 +56,10 @@ Partial Class Form3
         Me.btn_follow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_follow.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_follow.ForeColor = System.Drawing.Color.Black
-        Me.btn_follow.Location = New System.Drawing.Point(363, 21)
+        Me.btn_follow.Location = New System.Drawing.Point(327, 11)
         Me.btn_follow.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_follow.Name = "btn_follow"
-        Me.btn_follow.Size = New System.Drawing.Size(94, 34)
+        Me.btn_follow.Size = New System.Drawing.Size(94, 29)
         Me.btn_follow.TabIndex = 58
         Me.btn_follow.Text = "フォロー"
         Me.btn_follow.UseVisualStyleBackColor = False
@@ -68,10 +68,10 @@ Partial Class Form3
         '
         Me.lbl_me.Font = New System.Drawing.Font("Meiryo UI", 11.0!, System.Drawing.FontStyle.Bold)
         Me.lbl_me.ForeColor = System.Drawing.Color.DimGray
-        Me.lbl_me.Location = New System.Drawing.Point(11, 77)
+        Me.lbl_me.Location = New System.Drawing.Point(11, 82)
         Me.lbl_me.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_me.Name = "lbl_me"
-        Me.lbl_me.Size = New System.Drawing.Size(451, 132)
+        Me.lbl_me.Size = New System.Drawing.Size(410, 127)
         Me.lbl_me.TabIndex = 57
         Me.lbl_me.Text = "自己紹介文"
         '
@@ -80,7 +80,7 @@ Partial Class Form3
         Me.lbl_follow_people.AutoSize = True
         Me.lbl_follow_people.Font = New System.Drawing.Font("Meiryo UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.lbl_follow_people.ForeColor = System.Drawing.Color.Black
-        Me.lbl_follow_people.Location = New System.Drawing.Point(11, 209)
+        Me.lbl_follow_people.Location = New System.Drawing.Point(11, 214)
         Me.lbl_follow_people.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_follow_people.Name = "lbl_follow_people"
         Me.lbl_follow_people.Size = New System.Drawing.Size(17, 18)
@@ -92,7 +92,7 @@ Partial Class Form3
         Me.lbl_follow.AutoSize = True
         Me.lbl_follow.Font = New System.Drawing.Font("Meiryo UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.lbl_follow.ForeColor = System.Drawing.Color.DarkGray
-        Me.lbl_follow.Location = New System.Drawing.Point(42, 209)
+        Me.lbl_follow.Location = New System.Drawing.Point(42, 214)
         Me.lbl_follow.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_follow.Name = "lbl_follow"
         Me.lbl_follow.Size = New System.Drawing.Size(65, 18)
@@ -101,19 +101,18 @@ Partial Class Form3
         '
         'lbl_Usrname
         '
-        Me.lbl_Usrname.AutoSize = True
         Me.lbl_Usrname.Font = New System.Drawing.Font("Meiryo UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lbl_Usrname.Location = New System.Drawing.Point(79, 30)
+        Me.lbl_Usrname.Location = New System.Drawing.Point(83, 21)
         Me.lbl_Usrname.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_Usrname.Name = "lbl_Usrname"
-        Me.lbl_Usrname.Size = New System.Drawing.Size(195, 41)
+        Me.lbl_Usrname.Size = New System.Drawing.Size(236, 46)
         Me.lbl_Usrname.TabIndex = 54
         Me.lbl_Usrname.Text = "UserName"
         '
         'pic_Usricon
         '
         Me.pic_Usricon.Image = Global.tbatter_01.My.Resources.Resources.unnamed
-        Me.pic_Usricon.Location = New System.Drawing.Point(14, 6)
+        Me.pic_Usricon.Location = New System.Drawing.Point(14, 9)
         Me.pic_Usricon.Margin = New System.Windows.Forms.Padding(2)
         Me.pic_Usricon.Name = "pic_Usricon"
         Me.pic_Usricon.Size = New System.Drawing.Size(60, 64)
@@ -129,7 +128,7 @@ Partial Class Form3
         Me.hbtk_FlowLayout.Location = New System.Drawing.Point(14, 279)
         Me.hbtk_FlowLayout.Margin = New System.Windows.Forms.Padding(2)
         Me.hbtk_FlowLayout.Name = "hbtk_FlowLayout"
-        Me.hbtk_FlowLayout.Size = New System.Drawing.Size(448, 267)
+        Me.hbtk_FlowLayout.Size = New System.Drawing.Size(407, 267)
         Me.hbtk_FlowLayout.TabIndex = 52
         '
         'Button1
@@ -139,10 +138,10 @@ Partial Class Form3
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(363, 59)
+        Me.Button1.Location = New System.Drawing.Point(327, 40)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 34)
+        Me.Button1.Size = New System.Drawing.Size(94, 29)
         Me.Button1.TabIndex = 60
         Me.Button1.Text = "メッセージ"
         Me.Button1.UseVisualStyleBackColor = False
@@ -152,7 +151,7 @@ Partial Class Form3
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(468, 555)
+        Me.ClientSize = New System.Drawing.Size(432, 555)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btn_osusume)
         Me.Controls.Add(Me.btn_follow)
