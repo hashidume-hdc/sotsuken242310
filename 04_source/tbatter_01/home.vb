@@ -3,6 +3,12 @@ Imports System.Data
 
 Public Class home
 
+    Private Enum TimelineMode
+        Normal
+        FollowOnly
+    End Enum
+
+    Private currentMode As TimelineMode = TimelineMode.Normal
     Private currentCommentParentId As Integer = 0
 
     Private Sub home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -13,12 +19,18 @@ Public Class home
     End Sub
 
     Private Sub LoadTimeline()
+
         hbtk_FlowLayout.Controls.Clear()
 
-        If currentCommentParentId = 0 Then
+        If currentCommentParentId <> 0 Then
+            LoadCommentTimeline(currentCommentParentId)
+            Exit Sub
+        End If
+
+        If currentMode = TimelineMode.Normal Then
             LoadNormalTimeline()
         Else
-            LoadCommentTimeline(currentCommentParentId)
+            LoadFollowTimeline()
         End If
     End Sub
 
@@ -33,13 +45,27 @@ Public Class home
             "ORDER BY h.hbtk_time DESC"
 
         LoadPosts(sql, Nothing, False)
+    End Sub
 
+    ' ===== フォロー中のみ =====
+    Private Sub LoadFollowTimeline()
+
+        Dim sql As String =
+            "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
+            "FROM follows f " &
+            "INNER JOIN hbtks h ON f.follower_id = h.user_id " &
+            "LEFT JOIN users u ON h.user_id = u.user_id " &
+            "WHERE f.user_id = @me " &
+            "AND h.pare_hbtk_id = 0 " &
+            "AND h.delete_frag = 0 " &
+            "ORDER BY h.hbtk_time DESC"
+
+        LoadPosts(sql, Nothing, False)
     End Sub
 
     ' ===== 親＋コメント =====
     Private Sub LoadCommentTimeline(parentId As Integer)
 
-        ' 親投稿
         LoadPosts(
             "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
             "FROM hbtks h LEFT JOIN users u ON h.user_id=u.user_id " &
@@ -47,7 +73,6 @@ Public Class home
             parentId,
             False)
 
-        ' コメント
         LoadPosts(
             "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
             "FROM hbtks h LEFT JOIN users u ON h.user_id=u.user_id " &
@@ -55,7 +80,6 @@ Public Class home
             "ORDER BY h.hbtk_time ASC",
             parentId,
             True)
-
     End Sub
 
     ' ===== 共通描画 =====
@@ -65,10 +89,17 @@ Public Class home
 
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
+
             Using cmd As New MySqlCommand(sql, conn)
+
+                If sql.Contains("@me") Then
+                    cmd.Parameters.AddWithValue("@me", Session.CurrentUserId)
+                End If
+
                 If id.HasValue Then
                     cmd.Parameters.AddWithValue("@id", id.Value)
                 End If
+
                 Using da As New MySqlDataAdapter(cmd)
                     da.Fill(dt)
                 End Using
@@ -97,30 +128,30 @@ Public Class home
 
             hbtk_FlowLayout.Controls.Add(ctl)
         Next
-
     End Sub
 
     Private Sub OnCommentRequested(hbtkId As Integer)
-
         Using frm As New comment_frm(hbtkId)
             If frm.ShowDialog() = DialogResult.OK Then
                 currentCommentParentId = hbtkId
                 LoadTimeline()
             End If
         End Using
-
     End Sub
 
-
     Private Function GetPostImages(hbtkId As Integer) As List(Of String)
+
         Dim list As New List(Of String)
 
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
+
             Using cmd As New MySqlCommand(
                 "SELECT image_url FROM post_images WHERE hbtk_id=@id ORDER BY sort_order", conn)
+
                 cmd.Parameters.AddWithValue("@id", hbtkId)
                 conn.Open()
+
                 Using rdr = cmd.ExecuteReader()
                     While rdr.Read()
                         list.Add(rdr("image_url").ToString())
@@ -138,8 +169,20 @@ Public Class home
         LoadTimeline()
     End Sub
 
-    Private Sub home_Activated(sender As Object, e As EventArgs) _
-    Handles Me.Activated
+    ' ===== TL切替ボタン =====
+    Private Sub btn_follow_Click(sender As Object, e As EventArgs) Handles btn_follow.Click
+        currentCommentParentId = 0
+        currentMode = TimelineMode.FollowOnly
+        LoadTimeline()
+    End Sub
+
+    Private Sub btn_osusume_Click(sender As Object, e As EventArgs) Handles btn_osusume.Click
+        currentCommentParentId = 0
+        currentMode = TimelineMode.Normal
+        LoadTimeline()
+    End Sub
+
+    Private Sub home_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         LoadTimeline()
     End Sub
 
@@ -170,4 +213,5 @@ Public Class home
         Me.Hide()
         setting.Show()
     End Sub
+
 End Class

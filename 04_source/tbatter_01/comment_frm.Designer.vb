@@ -33,6 +33,7 @@ Partial Class comment_frm
         Me.btn_img3 = New System.Windows.Forms.Button()
         Me.btn_img2 = New System.Windows.Forms.Button()
         Me.btn_img1 = New System.Windows.Forms.Button()
+        Me.btn_no = New System.Windows.Forms.Button()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,12 +153,28 @@ Partial Class comment_frm
         Me.btn_img1.Text = "アップロード"
         Me.btn_img1.UseVisualStyleBackColor = True
         '
+        'btn_no
+        '
+        Me.btn_no.BackColor = System.Drawing.Color.White
+        Me.btn_no.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
+        Me.btn_no.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_no.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.btn_no.ForeColor = System.Drawing.Color.Black
+        Me.btn_no.Location = New System.Drawing.Point(221, 327)
+        Me.btn_no.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_no.Name = "btn_no"
+        Me.btn_no.Size = New System.Drawing.Size(118, 34)
+        Me.btn_no.TabIndex = 75
+        Me.btn_no.Text = "キャンセル"
+        Me.btn_no.UseVisualStyleBackColor = False
+        '
         'comment_frm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(441, 377)
+        Me.Controls.Add(Me.btn_no)
         Me.Controls.Add(Me.btn_img4)
         Me.Controls.Add(Me.btn_img3)
         Me.Controls.Add(Me.btn_img2)
@@ -191,4 +208,5 @@ Partial Class comment_frm
     Friend WithEvents btn_img3 As Button
     Friend WithEvents btn_img2 As Button
     Friend WithEvents btn_img1 As Button
+    Friend WithEvents btn_no As Button
 End Class

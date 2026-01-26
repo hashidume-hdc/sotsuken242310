@@ -15,6 +15,7 @@ Public Class tbatter_hbtk_Control
         InitializeComponent()
         Me.AutoSize = True
         Me.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        Me.BackColor = Color.WhiteSmoke
     End Sub
 
     Public Sub SetData(

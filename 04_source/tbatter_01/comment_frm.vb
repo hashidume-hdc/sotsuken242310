@@ -99,5 +99,10 @@ Public Class comment_frm
         Me.Close()
 
     End Sub
+    Private Sub btn_no_Click(sender As Object, e As EventArgs) Handles btn_no.Click
+        Me.DialogResult = DialogResult.OK
+        Me.Close()
+    End Sub
+
 
 End Class
