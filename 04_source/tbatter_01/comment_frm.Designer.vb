@@ -160,10 +160,10 @@ Partial Class comment_frm
         Me.btn_no.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_no.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.btn_no.ForeColor = System.Drawing.Color.Black
-        Me.btn_no.Location = New System.Drawing.Point(221, 327)
+        Me.btn_no.Location = New System.Drawing.Point(249, 327)
         Me.btn_no.Margin = New System.Windows.Forms.Padding(2)
         Me.btn_no.Name = "btn_no"
-        Me.btn_no.Size = New System.Drawing.Size(118, 34)
+        Me.btn_no.Size = New System.Drawing.Size(90, 34)
         Me.btn_no.TabIndex = 75
         Me.btn_no.Text = "キャンセル"
         Me.btn_no.UseVisualStyleBackColor = False

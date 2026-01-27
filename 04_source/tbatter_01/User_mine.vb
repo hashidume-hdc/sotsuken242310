@@ -304,4 +304,9 @@ Public Class User_mine
     Private Sub lbl_follow_Click(sender As Object, e As EventArgs) Handles lbl_follow.Click
         follow_now.Show()
     End Sub
+
+    Private Sub btn_messege_Click(sender As Object, e As EventArgs) Handles btn_messege.Click
+        s.Show()
+        Me.Hide()
+    End Sub
 End Class

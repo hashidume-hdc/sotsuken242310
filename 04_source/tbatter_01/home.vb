@@ -201,6 +201,7 @@ Public Class home
     End Sub
 
     Private Sub btn_messege_Click(sender As Object, e As EventArgs) Handles btn_messege.Click
+        s.Show()
         Me.Hide()
     End Sub
 

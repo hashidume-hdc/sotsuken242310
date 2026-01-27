@@ -26,22 +26,21 @@ Partial Class home_ad
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btn_hbtk_del = New System.Windows.Forms.Button()
+        Me.btn_usr_del = New System.Windows.Forms.Button()
+        Me.dgv_hbtk = New System.Windows.Forms.DataGridView()
+        Me.txt_usr_sarch = New System.Windows.Forms.TextBox()
+        Me.btn_send = New System.Windows.Forms.Button()
+        Me.dgv_usr = New System.Windows.Forms.DataGridView()
+        CType(Me.dgv_hbtk, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_usr, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("MS UI Gothic", 15.0!)
-        Me.Label3.Location = New System.Drawing.Point(637, 499)
+        Me.Label3.Location = New System.Drawing.Point(805, 246)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 20)
         Me.Label3.TabIndex = 21
@@ -50,7 +49,7 @@ Partial Class home_ad
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("MS UI Gothic", 13.0!)
-        Me.Button5.Location = New System.Drawing.Point(637, 533)
+        Me.Button5.Location = New System.Drawing.Point(805, 280)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(256, 44)
         Me.Button5.TabIndex = 20
@@ -61,7 +60,7 @@ Partial Class home_ad
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("MS UI Gothic", 15.0!)
-        Me.Label2.Location = New System.Drawing.Point(637, 231)
+        Me.Label2.Location = New System.Drawing.Point(805, 140)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(114, 20)
         Me.Label2.TabIndex = 19
@@ -71,98 +70,87 @@ Partial Class home_ad
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("MS UI Gothic", 15.0!)
-        Me.Label1.Location = New System.Drawing.Point(637, 41)
+        Me.Label1.Location = New System.Drawing.Point(801, 41)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(122, 20)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "アカウント関連"
         '
-        'Button4
+        'btn_hbtk_del
         '
-        Me.Button4.Font = New System.Drawing.Font("MS UI Gothic", 13.0!)
-        Me.Button4.Location = New System.Drawing.Point(637, 267)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(256, 44)
-        Me.Button4.TabIndex = 17
-        Me.Button4.Text = "選択しているはばたきを削除する" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btn_hbtk_del.Font = New System.Drawing.Font("MS UI Gothic", 13.0!)
+        Me.btn_hbtk_del.Location = New System.Drawing.Point(805, 176)
+        Me.btn_hbtk_del.Name = "btn_hbtk_del"
+        Me.btn_hbtk_del.Size = New System.Drawing.Size(256, 44)
+        Me.btn_hbtk_del.TabIndex = 17
+        Me.btn_hbtk_del.Text = "選択しているはばたきを削除する" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.btn_hbtk_del.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btn_usr_del
         '
-        Me.Button3.Font = New System.Drawing.Font("MS UI Gothic", 13.0!)
-        Me.Button3.Location = New System.Drawing.Point(637, 121)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(256, 38)
-        Me.Button3.TabIndex = 16
-        Me.Button3.Text = "選択しているアカウントを削除する" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btn_usr_del.Font = New System.Drawing.Font("MS UI Gothic", 13.0!)
+        Me.btn_usr_del.Location = New System.Drawing.Point(805, 78)
+        Me.btn_usr_del.Name = "btn_usr_del"
+        Me.btn_usr_del.Size = New System.Drawing.Size(256, 38)
+        Me.btn_usr_del.TabIndex = 16
+        Me.btn_usr_del.Text = "選択しているアカウントを削除する" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.btn_usr_del.UseVisualStyleBackColor = True
         '
-        'Button2
+        'dgv_hbtk
         '
-        Me.Button2.Font = New System.Drawing.Font("MS UI Gothic", 13.0!)
-        Me.Button2.Location = New System.Drawing.Point(637, 77)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(256, 38)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = "選択しているアカウントを停止する"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.dgv_hbtk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_hbtk.Location = New System.Drawing.Point(505, 37)
+        Me.dgv_hbtk.Name = "dgv_hbtk"
+        Me.dgv_hbtk.RowTemplate.Height = 21
+        Me.dgv_hbtk.Size = New System.Drawing.Size(289, 537)
+        Me.dgv_hbtk.TabIndex = 14
         '
-        'DataGridView2
+        'txt_usr_sarch
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(323, 41)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowTemplate.Height = 21
-        Me.DataGridView2.Size = New System.Drawing.Size(308, 537)
-        Me.DataGridView2.TabIndex = 14
+        Me.txt_usr_sarch.Location = New System.Drawing.Point(9, 12)
+        Me.txt_usr_sarch.Name = "txt_usr_sarch"
+        Me.txt_usr_sarch.Size = New System.Drawing.Size(541, 19)
+        Me.txt_usr_sarch.TabIndex = 13
+        Me.txt_usr_sarch.Text = "アカウント名を入力"
         '
-        'TextBox1
+        'btn_send
         '
-        Me.TextBox1.Location = New System.Drawing.Point(9, 12)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(541, 19)
-        Me.TextBox1.TabIndex = 13
-        Me.TextBox1.Text = "アカウント名を入力"
+        Me.btn_send.Location = New System.Drawing.Point(556, 12)
+        Me.btn_send.Name = "btn_send"
+        Me.btn_send.Size = New System.Drawing.Size(75, 23)
+        Me.btn_send.TabIndex = 12
+        Me.btn_send.Text = "検索"
+        Me.btn_send.UseVisualStyleBackColor = True
         '
-        'Button1
+        'dgv_usr
         '
-        Me.Button1.Location = New System.Drawing.Point(556, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "検索"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(9, 41)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 21
-        Me.DataGridView1.Size = New System.Drawing.Size(308, 537)
-        Me.DataGridView1.TabIndex = 11
+        Me.dgv_usr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_usr.Location = New System.Drawing.Point(12, 37)
+        Me.dgv_usr.Name = "dgv_usr"
+        Me.dgv_usr.RowTemplate.Height = 21
+        Me.dgv_usr.Size = New System.Drawing.Size(487, 537)
+        Me.dgv_usr.TabIndex = 11
         '
         'home_ad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(903, 590)
+        Me.ClientSize = New System.Drawing.Size(1074, 590)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.DataGridView2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.btn_hbtk_del)
+        Me.Controls.Add(Me.btn_usr_del)
+        Me.Controls.Add(Me.dgv_hbtk)
+        Me.Controls.Add(Me.txt_usr_sarch)
+        Me.Controls.Add(Me.btn_send)
+        Me.Controls.Add(Me.dgv_usr)
         Me.Name = "home_ad"
         Me.Text = "Form5"
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_hbtk, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_usr, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -172,11 +160,10 @@ Partial Class home_ad
     Friend WithEvents Button5 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btn_hbtk_del As Button
+    Friend WithEvents dgv_hbtk As DataGridView
+    Friend WithEvents txt_usr_sarch As TextBox
+    Friend WithEvents btn_send As Button
+    Friend WithEvents dgv_usr As DataGridView
+    Friend WithEvents btn_usr_del As Button
 End Class

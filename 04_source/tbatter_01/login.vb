@@ -26,7 +26,9 @@ Public Class login
 
                 cmd.CommandText =
                     "SELECT user_id FROM users " &
-                    "WHERE user_name = @UserName AND password = @Password"
+                    "WHERE user_name = @UserName " &
+                    "AND password = @Password " &
+                    "AND delete_frag = 0"
 
                 cmd.Parameters.AddWithValue("@UserName", userName)
                 cmd.Parameters.AddWithValue("@Password", pswd)
@@ -36,7 +38,6 @@ Public Class login
                 If result IsNot Nothing Then
                     Dim userId As Integer = CInt(result)
 
-                    ' ★ Session に保存
                     Session.CurrentUserId = userId
 
                     MessageBox.Show("ようこそ",
@@ -47,16 +48,17 @@ Public Class login
                     home.Show()
                     Me.Hide()
                 Else
-                    MessageBox.Show("ユーザーネームまたはパスワードが間違っています。",
-                                    "エラー",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error)
+                    MessageBox.Show(
+                        "ユーザーネームまたはパスワードが間違っているか、" & vbCrLf &
+                        "このアカウントは削除されています。",
+                        "エラー",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error)
                 End If
 
             End Using
         End Using
     End Sub
-
 
     Private Sub btn_newuser_Click(sender As Object, e As EventArgs) Handles btn_newuser.Click
         newUser.Show()
@@ -72,4 +74,5 @@ Public Class login
         Me.Hide()
         login_ad.Show()
     End Sub
+
 End Class

@@ -282,7 +282,7 @@ Partial Class s
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(371, 7)
+        Me.Button1.Location = New System.Drawing.Point(371, 512)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(50, 34)
@@ -294,7 +294,7 @@ Partial Class s
         '
         Me.TextBox1.Font = New System.Drawing.Font("Meiryo UI", 14.0!, System.Drawing.FontStyle.Bold)
         Me.TextBox1.ForeColor = System.Drawing.Color.Silver
-        Me.TextBox1.Location = New System.Drawing.Point(256, 7)
+        Me.TextBox1.Location = New System.Drawing.Point(256, 512)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(111, 31)
@@ -304,10 +304,10 @@ Partial Class s
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(256, 43)
+        Me.DataGridView1.Location = New System.Drawing.Point(256, 11)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 21
-        Me.DataGridView1.Size = New System.Drawing.Size(165, 500)
+        Me.DataGridView1.Size = New System.Drawing.Size(165, 493)
         Me.DataGridView1.TabIndex = 63
         '
         's

@@ -202,4 +202,32 @@ Public Class sarch
         Return list
     End Function
 
+    Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
+        home.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub pic_hbtk_Click(sender As Object, e As EventArgs) Handles pic_hbtk.Click
+        hbtk_frm.Show()
+    End Sub
+
+    Private Sub btn_messege_Click(sender As Object, e As EventArgs) Handles btn_messege.Click
+        s.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btn_trend_Click(sender As Object, e As EventArgs) Handles btn_trend.Click
+        trend.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btn_account_Click(sender As Object, e As EventArgs) Handles btn_account.Click
+        User_mine.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btn_setting_Click(sender As Object, e As EventArgs) Handles btn_setting.Click
+        setting.Show()
+        Me.Hide()
+    End Sub
 End Class
