@@ -39,9 +39,9 @@ Partial Class s
         Me.pic_sarch = New System.Windows.Forms.PictureBox()
         Me.pic_home = New System.Windows.Forms.PictureBox()
         Me.tbtr_icon = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btn_usr = New System.Windows.Forms.Button()
+        Me.txt_usr = New System.Windows.Forms.TextBox()
+        Me.dgv_usr = New System.Windows.Forms.DataGridView()
         CType(Me.pic_hbtk, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_setting, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_account, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,7 +50,7 @@ Partial Class s
         CType(Me.pic_sarch, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_home, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbtr_icon, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_usr, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_setting
@@ -275,40 +275,40 @@ Partial Class s
         Me.tbtr_icon.TabIndex = 44
         Me.tbtr_icon.TabStop = False
         '
-        'Button1
+        'btn_usr
         '
-        Me.Button1.BackColor = System.Drawing.Color.Black
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(371, 512)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(50, 34)
-        Me.Button1.TabIndex = 62
-        Me.Button1.Text = "検索"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btn_usr.BackColor = System.Drawing.Color.Black
+        Me.btn_usr.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btn_usr.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_usr.Font = New System.Drawing.Font("Meiryo UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.btn_usr.ForeColor = System.Drawing.Color.White
+        Me.btn_usr.Location = New System.Drawing.Point(371, 512)
+        Me.btn_usr.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_usr.Name = "btn_usr"
+        Me.btn_usr.Size = New System.Drawing.Size(50, 34)
+        Me.btn_usr.TabIndex = 62
+        Me.btn_usr.Text = "検索"
+        Me.btn_usr.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'txt_usr
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Meiryo UI", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.TextBox1.ForeColor = System.Drawing.Color.Silver
-        Me.TextBox1.Location = New System.Drawing.Point(256, 512)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(111, 31)
-        Me.TextBox1.TabIndex = 61
-        Me.TextBox1.Text = "ユーザ名"
+        Me.txt_usr.Font = New System.Drawing.Font("Meiryo UI", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.txt_usr.ForeColor = System.Drawing.Color.Silver
+        Me.txt_usr.Location = New System.Drawing.Point(256, 512)
+        Me.txt_usr.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_usr.Name = "txt_usr"
+        Me.txt_usr.Size = New System.Drawing.Size(111, 31)
+        Me.txt_usr.TabIndex = 61
+        Me.txt_usr.Text = "ユーザ名"
         '
-        'DataGridView1
+        'dgv_usr
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(256, 11)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 21
-        Me.DataGridView1.Size = New System.Drawing.Size(165, 493)
-        Me.DataGridView1.TabIndex = 63
+        Me.dgv_usr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_usr.Location = New System.Drawing.Point(256, 11)
+        Me.dgv_usr.Name = "dgv_usr"
+        Me.dgv_usr.RowTemplate.Height = 21
+        Me.dgv_usr.Size = New System.Drawing.Size(165, 493)
+        Me.dgv_usr.TabIndex = 63
         '
         's
         '
@@ -316,9 +316,9 @@ Partial Class s
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(812, 554)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.dgv_usr)
+        Me.Controls.Add(Me.btn_usr)
+        Me.Controls.Add(Me.txt_usr)
         Me.Controls.Add(Me.btn_msg)
         Me.Controls.Add(Me.txt_msg)
         Me.Controls.Add(Me.msg_FlowLayout)
@@ -347,7 +347,7 @@ Partial Class s
         CType(Me.pic_sarch, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_home, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbtr_icon, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_usr, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -370,7 +370,7 @@ Partial Class s
     Friend WithEvents msg_FlowLayout As FlowLayoutPanel
     Friend WithEvents txt_msg As TextBox
     Friend WithEvents btn_msg As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btn_usr As Button
+    Friend WithEvents txt_usr As TextBox
+    Friend WithEvents dgv_usr As DataGridView
 End Class

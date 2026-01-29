@@ -46,9 +46,9 @@ Partial Class tbatter_msg_Control
         Me.lbl_hbtk_User.Location = New System.Drawing.Point(43, 2)
         Me.lbl_hbtk_User.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_hbtk_User.Name = "lbl_hbtk_User"
-        Me.lbl_hbtk_User.Size = New System.Drawing.Size(61, 15)
+        Me.lbl_hbtk_User.Size = New System.Drawing.Size(50, 15)
         Me.lbl_hbtk_User.TabIndex = 10
-        Me.lbl_hbtk_User.Text = "ユーザー名"
+        Me.lbl_hbtk_User.Text = "ユーザ名"
         '
         'Usericon
         '
