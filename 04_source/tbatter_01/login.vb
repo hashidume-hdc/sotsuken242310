@@ -75,4 +75,42 @@ Public Class login
         login_ad.Show()
     End Sub
 
+    Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' ログインID
+        txt_loginID.Text = "ユーザーネームを入力"
+        txt_loginID.ForeColor = Color.Gray
+
+        ' パスワード
+        txt_loginPswd.Text = "パスワードを入力"
+        txt_loginPswd.ForeColor = Color.Gray
+        txt_loginPswd.UseSystemPasswordChar = False
+    End Sub
+    Private Sub txt_loginID_Enter(sender As Object, e As EventArgs) Handles txt_loginID.Enter
+        If txt_loginID.ForeColor = Color.Gray Then
+            txt_loginID.Text = ""
+            txt_loginID.ForeColor = Color.Black
+        End If
+    End Sub
+
+    Private Sub txt_loginID_Leave(sender As Object, e As EventArgs) Handles txt_loginID.Leave
+        If txt_loginID.Text = "" Then
+            txt_loginID.Text = "ユーザーネームを入力"
+            txt_loginID.ForeColor = Color.Gray
+        End If
+    End Sub
+    Private Sub txt_loginPswd_Enter(sender As Object, e As EventArgs) Handles txt_loginPswd.Enter
+        If txt_loginPswd.ForeColor = Color.Gray Then
+            txt_loginPswd.Text = ""
+            txt_loginPswd.ForeColor = Color.Black
+            txt_loginPswd.UseSystemPasswordChar = True
+        End If
+    End Sub
+
+    Private Sub txt_loginPswd_Leave(sender As Object, e As EventArgs) Handles txt_loginPswd.Leave
+        If txt_loginPswd.Text = "" Then
+            txt_loginPswd.Text = "パスワードを入力"
+            txt_loginPswd.ForeColor = Color.Gray
+            txt_loginPswd.UseSystemPasswordChar = False
+        End If
+    End Sub
 End Class

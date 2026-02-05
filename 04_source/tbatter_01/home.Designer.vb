@@ -57,7 +57,7 @@ Partial Class home
         Me.hbtk_FlowLayout.Location = New System.Drawing.Point(208, 45)
         Me.hbtk_FlowLayout.Margin = New System.Windows.Forms.Padding(2)
         Me.hbtk_FlowLayout.Name = "hbtk_FlowLayout"
-        Me.hbtk_FlowLayout.Size = New System.Drawing.Size(407, 508)
+        Me.hbtk_FlowLayout.Size = New System.Drawing.Size(407, 500)
         Me.hbtk_FlowLayout.TabIndex = 0
         '
         'btn_home

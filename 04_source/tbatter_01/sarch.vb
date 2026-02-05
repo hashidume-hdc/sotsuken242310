@@ -9,6 +9,10 @@ Public Class sarch
         hbtk_FlowLayout.FlowDirection = FlowDirection.TopDown
         hbtk_FlowLayout.WrapContents = False
         hbtk_FlowLayout.AutoScroll = True
+
+        txt_sarchwrd.Text = "検索内容"
+        txt_sarchwrd.ForeColor = Color.Gray
+
     End Sub
 
     ' ===== 検索ボタン =====
@@ -229,5 +233,18 @@ Public Class sarch
     Private Sub btn_setting_Click(sender As Object, e As EventArgs) Handles btn_setting.Click
         setting.Show()
         Me.Hide()
+    End Sub
+    Private Sub txt_sarchwrd_Enter(sender As Object, e As EventArgs) Handles txt_sarchwrd.Enter
+        If txt_sarchwrd.ForeColor = Color.Gray Then
+            txt_sarchwrd.Text = ""
+            txt_sarchwrd.ForeColor = Color.Black
+        End If
+    End Sub
+
+    Private Sub txt_loginID_Leave(sender As Object, e As EventArgs) Handles txt_sarchwrd.Leave
+        If txt_sarchwrd.Text = "" Then
+            txt_sarchwrd.Text = "検索内容"
+            txt_sarchwrd.ForeColor = Color.Gray
+        End If
     End Sub
 End Class
