@@ -31,6 +31,7 @@ Partial Class tbatter_hbtk_Control
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btn_viewReplies = New System.Windows.Forms.Button()
         CType(Me.Usericon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,10 +132,23 @@ Partial Class tbatter_hbtk_Control
         Me.PictureBox1.TabIndex = 59
         Me.PictureBox1.TabStop = False
         '
+        'btn_viewReplies
+        '
+        Me.btn_viewReplies.Font = New System.Drawing.Font("Meiryo UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.btn_viewReplies.ForeColor = System.Drawing.Color.Gray
+        Me.btn_viewReplies.Location = New System.Drawing.Point(153, 184)
+        Me.btn_viewReplies.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_viewReplies.Name = "btn_viewReplies"
+        Me.btn_viewReplies.Size = New System.Drawing.Size(74, 22)
+        Me.btn_viewReplies.TabIndex = 63
+        Me.btn_viewReplies.Text = "リプを見る"
+        Me.btn_viewReplies.UseVisualStyleBackColor = True
+        '
         'tbatter_hbtk_Control
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.btn_viewReplies)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -165,4 +179,5 @@ Partial Class tbatter_hbtk_Control
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btn_viewReplies As Button
 End Class

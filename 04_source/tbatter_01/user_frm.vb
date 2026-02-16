@@ -9,14 +9,18 @@ Public Class Form3
     Private _isFollowing As Boolean
     Private currentCommentParentId As Integer = 0
 
-    ' ===== コンストラクタ =====
+    ' ==============================
+    ' コンストラクタ
+    ' ==============================
     Public Sub New(userId As Integer)
         InitializeComponent()
         _userId = userId
     End Sub
 
-    ' ===== フォームロード =====
-    Private Sub user_frm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    ' ==============================
+    ' フォームロード
+    ' ==============================
+    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         If Session.CurrentUserId = 0 OrElse _userId <= 0 Then
             MessageBox.Show("ユーザー情報が不正です", "エラー")
@@ -35,20 +39,27 @@ Public Class Form3
         UpdateFollowButton()
 
         LoadTimeline()
+
     End Sub
 
-    ' ===== タイムライン切替 =====
+    ' ==============================
+    ' タイムライン切替
+    ' ==============================
     Private Sub LoadTimeline()
+
         hbtk_FlowLayout.Controls.Clear()
 
-        If currentCommentParentId = 0 Then
-            LoadNormalTimeline()
-        Else
+        If currentCommentParentId <> 0 Then
             LoadCommentTimeline(currentCommentParentId)
+        Else
+            LoadNormalTimeline()
         End If
+
     End Sub
 
-    ' ===== 通常（特定ユーザーの投稿） =====
+    ' ==============================
+    ' 通常投稿表示
+    ' ==============================
     Private Sub LoadNormalTimeline()
 
         Dim sql As String =
@@ -61,9 +72,12 @@ Public Class Form3
             "ORDER BY h.hbtk_time DESC"
 
         LoadPosts(sql, Nothing, False)
+
     End Sub
 
-    ' ===== 親＋コメント =====
+    ' ==============================
+    ' 親＋返信表示
+    ' ==============================
     Private Sub LoadCommentTimeline(parentId As Integer)
 
         ' 親投稿
@@ -74,7 +88,7 @@ Public Class Form3
             parentId,
             False)
 
-        ' コメント
+        ' 返信
         LoadPosts(
             "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
             "FROM hbtks h LEFT JOIN users u ON h.user_id=u.user_id " &
@@ -82,9 +96,12 @@ Public Class Form3
             "ORDER BY h.hbtk_time ASC",
             parentId,
             True)
+
     End Sub
 
-    ' ===== 共通描画 =====
+    ' ==============================
+    ' 共通描画
+    ' ==============================
     Private Sub LoadPosts(sql As String, id As Integer?, indent As Boolean)
 
         Dim dt As New DataTable
@@ -105,13 +122,16 @@ Public Class Form3
                 Using da As New MySqlDataAdapter(cmd)
                     da.Fill(dt)
                 End Using
+
             End Using
         End Using
 
         For Each row As DataRow In dt.Rows
 
             Dim ctl As New tbatter_hbtk_Control()
+
             AddHandler ctl.CommentRequested, AddressOf OnCommentRequested
+            AddHandler ctl.ViewRepliesRequested, AddressOf OnViewRepliesRequested
 
             ctl.SetData(
                 CInt(row("hbtk_id")),
@@ -129,10 +149,14 @@ Public Class Form3
             End If
 
             hbtk_FlowLayout.Controls.Add(ctl)
+
         Next
+
     End Sub
 
-    ' ===== コメント要求 =====
+    ' ==============================
+    ' コメント投稿
+    ' ==============================
     Private Sub OnCommentRequested(hbtkId As Integer)
 
         Using frm As New comment_frm(hbtkId)
@@ -141,9 +165,27 @@ Public Class Form3
                 LoadTimeline()
             End If
         End Using
+
     End Sub
 
-    ' ===== 投稿画像 =====
+    ' ==============================
+    ' 返信を見る（トグル式）
+    ' ==============================
+    Private Sub OnViewRepliesRequested(hbtkId As Integer)
+
+        If currentCommentParentId = hbtkId Then
+            currentCommentParentId = 0
+        Else
+            currentCommentParentId = hbtkId
+        End If
+
+        LoadTimeline()
+
+    End Sub
+
+    ' ==============================
+    ' 投稿画像取得
+    ' ==============================
     Private Function GetPostImages(hbtkId As Integer) As List(Of String)
 
         Dim list As New List(Of String)
@@ -162,13 +204,17 @@ Public Class Form3
                         list.Add(rdr("image_url").ToString())
                     End While
                 End Using
+
             End Using
         End Using
 
         Return list
+
     End Function
 
-    ' ===== プロフィール =====
+    ' ==============================
+    ' プロフィール表示
+    ' ==============================
     Private Sub LoadUserProfile()
 
         Dim sql As String =
@@ -196,20 +242,29 @@ Public Class Form3
                 End Using
             End Using
         End Using
+
     End Sub
 
-    ' ===== フォロー関連（元コードそのまま） =====
+    ' ==============================
+    ' フォロー関連
+    ' ==============================
     Private Function IsFollowing() As Boolean
+
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
+
             Using cmd As New MySqlCommand(
                 "SELECT 1 FROM follows WHERE user_id=@me AND follower_id=@t LIMIT 1", conn)
+
                 cmd.Parameters.AddWithValue("@me", Session.CurrentUserId)
                 cmd.Parameters.AddWithValue("@t", _userId)
+
                 conn.Open()
                 Return cmd.ExecuteScalar() IsNot Nothing
+
             End Using
         End Using
+
     End Function
 
     Private Sub UpdateFollowButton()
@@ -217,42 +272,60 @@ Public Class Form3
     End Sub
 
     Private Sub btn_follow_Click(sender As Object, e As EventArgs) Handles btn_follow.Click
+
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
 
             conn.Open()
 
             If _isFollowing Then
+
                 Using cmd As New MySqlCommand(
                     "DELETE FROM follows WHERE user_id=@me AND follower_id=@t", conn)
+
                     cmd.Parameters.AddWithValue("@me", Session.CurrentUserId)
                     cmd.Parameters.AddWithValue("@t", _userId)
                     cmd.ExecuteNonQuery()
+
                 End Using
+
             Else
+
                 Using cmd As New MySqlCommand(
                     "INSERT INTO follows (user_id, follower_id) VALUES (@me,@t)", conn)
+
                     cmd.Parameters.AddWithValue("@me", Session.CurrentUserId)
                     cmd.Parameters.AddWithValue("@t", _userId)
                     cmd.ExecuteNonQuery()
+
                 End Using
+
             End If
+
         End Using
 
         _isFollowing = Not _isFollowing
         UpdateFollowButton()
+        LoadFollowCount()
+
     End Sub
 
     Private Sub LoadFollowCount()
+
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
+
             Using cmd As New MySqlCommand(
                 "SELECT COUNT(*) FROM follows WHERE user_id=@u", conn)
+
                 cmd.Parameters.AddWithValue("@u", _userId)
                 conn.Open()
+
                 lbl_follow_people.Text = cmd.ExecuteScalar().ToString()
+
             End Using
         End Using
+
     End Sub
 
 End Class

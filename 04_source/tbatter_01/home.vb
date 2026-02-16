@@ -109,7 +109,10 @@ Public Class home
         For Each row As DataRow In dt.Rows
 
             Dim ctl As New tbatter_hbtk_Control()
+
+            ' 🔥 イベント接続（ここが超重要）
             AddHandler ctl.CommentRequested, AddressOf OnCommentRequested
+            AddHandler ctl.ViewRepliesRequested, AddressOf OnViewRepliesRequested
 
             ctl.SetData(
                 CInt(row("hbtk_id")),
@@ -130,13 +133,24 @@ Public Class home
         Next
     End Sub
 
+    ' ===== コメントボタン =====
     Private Sub OnCommentRequested(hbtkId As Integer)
+
         Using frm As New comment_frm(hbtkId)
             If frm.ShowDialog() = DialogResult.OK Then
                 currentCommentParentId = hbtkId
                 LoadTimeline()
             End If
         End Using
+
+    End Sub
+
+    ' ===== 👀 返信を見るボタン =====
+    Private Sub OnViewRepliesRequested(hbtkId As Integer)
+
+        currentCommentParentId = hbtkId
+        LoadTimeline()
+
     End Sub
 
     Private Function GetPostImages(hbtkId As Integer) As List(Of String)

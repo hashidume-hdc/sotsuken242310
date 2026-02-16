@@ -8,14 +8,18 @@ Public Class tbatter_hbtk_Control
     Public Property HbtkId As Integer
     Public Property UserId As Integer
 
-    ' ===== コメント要求イベント =====
+    ' ===== イベント =====
     Public Event CommentRequested(hbtkId As Integer)
+    Public Event ViewRepliesRequested(hbtkId As Integer)
 
     Public Sub New()
         InitializeComponent()
         Me.AutoSize = True
         Me.AutoSizeMode = AutoSizeMode.GrowAndShrink
         Me.BackColor = Color.WhiteSmoke
+
+        ' 🔥 返信を見るボタンをイベント接続（Handles使わない安全方式）
+        AddHandler btn_viewReplies.Click, AddressOf btn_viewReplies_Click
     End Sub
 
     Public Sub SetData(
@@ -107,6 +111,13 @@ Public Class tbatter_hbtk_Control
 
     End Sub
 
+    ' ===== 返信を見るボタン =====
+    Private Sub btn_viewReplies_Click(sender As Object, e As EventArgs)
+
+        RaiseEvent ViewRepliesRequested(Me.HbtkId)
+
+    End Sub
+
     ' ===== いいね =====
     Private Sub btn_hbtk_like_Click(sender As Object, e As EventArgs) _
         Handles btn_hbtk_like.Click
@@ -135,8 +146,10 @@ Public Class tbatter_hbtk_Control
     Private Sub AddLike()
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
+
             Using cmd As New MySqlCommand(
                 "INSERT INTO likes (user_id, hbtk_id) VALUES (@u,@h)", conn)
+
                 cmd.Parameters.AddWithValue("@u", Session.CurrentUserId)
                 cmd.Parameters.AddWithValue("@h", Me.HbtkId)
                 conn.Open()
@@ -148,8 +161,10 @@ Public Class tbatter_hbtk_Control
     Private Sub RemoveLike()
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
+
             Using cmd As New MySqlCommand(
                 "DELETE FROM likes WHERE user_id=@u AND hbtk_id=@h", conn)
+
                 cmd.Parameters.AddWithValue("@u", Session.CurrentUserId)
                 cmd.Parameters.AddWithValue("@h", Me.HbtkId)
                 conn.Open()
@@ -159,12 +174,15 @@ Public Class tbatter_hbtk_Control
     End Sub
 
     Private Function IsLikedByCurrentUser() As Boolean
+
         If Session.CurrentUserId = 0 Then Return False
 
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
+
             Using cmd As New MySqlCommand(
                 "SELECT 1 FROM likes WHERE user_id=@u AND hbtk_id=@h LIMIT 1", conn)
+
                 cmd.Parameters.AddWithValue("@u", Session.CurrentUserId)
                 cmd.Parameters.AddWithValue("@h", Me.HbtkId)
                 conn.Open()
@@ -172,6 +190,7 @@ Public Class tbatter_hbtk_Control
             End Using
         End Using
     End Function
+
     Public Sub SetAsComment()
 
         lbl_hbtk_User.ForeColor = Color.Green

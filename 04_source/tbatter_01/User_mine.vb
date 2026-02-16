@@ -4,7 +4,9 @@ Imports System.Drawing
 
 Public Class User_mine
 
-    ' ===== タイムライン表示モード =====
+    ' ==============================
+    ' タイムライン表示モード
+    ' ==============================
     Private Enum TimelineMode
         MyPosts
         LikedPosts
@@ -13,7 +15,9 @@ Public Class User_mine
     Private currentMode As TimelineMode = TimelineMode.MyPosts
     Private currentCommentParentId As Integer = 0
 
-    ' ===== フォームロード =====
+    ' ==============================
+    ' フォームロード
+    ' ==============================
     Private Sub User_mine_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         If Session.CurrentUserId = 0 Then
@@ -29,6 +33,7 @@ Public Class User_mine
         LoadUserProfile()
         LoadFollowCount()
         LoadTimeline()
+
     End Sub
 
     Private Sub User_mine_Activated(sender As Object, e As EventArgs) _
@@ -37,27 +42,33 @@ Public Class User_mine
         LoadUserProfile()
         LoadFollowCount()
         LoadTimeline()
+
     End Sub
 
-    ' ===== タイムライン切替 =====
+    ' ==============================
+    ' タイムライン制御
+    ' ==============================
     Private Sub LoadTimeline()
 
         hbtk_FlowLayout.Controls.Clear()
 
         If currentCommentParentId <> 0 Then
             LoadCommentTimeline(currentCommentParentId)
-            Exit Sub
+        Else
+            LoadNormalTimeline()
         End If
 
-        LoadNormalTimeline()
     End Sub
 
-    ' ===== 通常タイムライン =====
+    ' ==============================
+    ' 通常タイムライン
+    ' ==============================
     Private Sub LoadNormalTimeline()
 
         Dim sql As String = ""
 
         If currentMode = TimelineMode.MyPosts Then
+
             sql =
                 "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
                 "FROM hbtks h " &
@@ -68,6 +79,7 @@ Public Class User_mine
                 "ORDER BY h.hbtk_time DESC"
 
         Else
+
             sql =
                 "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
                 "FROM likes l " &
@@ -76,12 +88,16 @@ Public Class User_mine
                 "WHERE l.user_id = @uid " &
                 "AND h.delete_frag = 0 " &
                 "ORDER BY h.hbtk_time DESC"
+
         End If
 
         LoadPosts(sql, Nothing, False)
+
     End Sub
 
-    ' ===== 親＋コメント =====
+    ' ==============================
+    ' 親＋返信表示
+    ' ==============================
     Private Sub LoadCommentTimeline(parentId As Integer)
 
         ' 親投稿
@@ -92,7 +108,7 @@ Public Class User_mine
             parentId,
             False)
 
-        ' コメント
+        ' 返信
         LoadPosts(
             "SELECT h.hbtk_id, h.user_id, h.content, u.user_name, u.icon_url " &
             "FROM hbtks h LEFT JOIN users u ON h.user_id=u.user_id " &
@@ -100,9 +116,12 @@ Public Class User_mine
             "ORDER BY h.hbtk_time ASC",
             parentId,
             True)
+
     End Sub
 
-    ' ===== 共通描画 =====
+    ' ==============================
+    ' 共通描画
+    ' ==============================
     Private Sub LoadPosts(sql As String, id As Integer?, indent As Boolean)
 
         Dim dt As New DataTable
@@ -123,13 +142,16 @@ Public Class User_mine
                 Using da As New MySqlDataAdapter(cmd)
                     da.Fill(dt)
                 End Using
+
             End Using
         End Using
 
         For Each row As DataRow In dt.Rows
 
             Dim ctl As New tbatter_hbtk_Control()
+
             AddHandler ctl.CommentRequested, AddressOf OnCommentRequested
+            AddHandler ctl.ViewRepliesRequested, AddressOf OnViewRepliesRequested
 
             ctl.SetData(
                 CInt(row("hbtk_id")),
@@ -147,10 +169,10 @@ Public Class User_mine
             End If
 
             hbtk_FlowLayout.Controls.Add(ctl)
-        Next
-    End Sub
 
-    ' ===== コメント要求 =====
+        Next
+
+    End Sub
     Private Sub OnCommentRequested(hbtkId As Integer)
 
         Using frm As New comment_frm(hbtkId)
@@ -159,9 +181,19 @@ Public Class User_mine
                 LoadTimeline()
             End If
         End Using
-    End Sub
 
-    ' ===== 投稿画像 =====
+    End Sub
+    Private Sub OnViewRepliesRequested(hbtkId As Integer)
+
+        If currentCommentParentId = hbtkId Then
+            currentCommentParentId = 0
+        Else
+            currentCommentParentId = hbtkId
+        End If
+
+        LoadTimeline()
+
+    End Sub
     Private Function GetPostImages(hbtkId As Integer) As List(Of String)
 
         Dim list As New List(Of String)
@@ -180,20 +212,20 @@ Public Class User_mine
                         list.Add(rdr("image_url").ToString())
                     End While
                 End Using
+
             End Using
         End Using
 
         Return list
-    End Function
 
-    ' ===== プロフィール =====
+    End Function
     Private Sub LoadUserProfile()
 
         Using conn As New MySqlConnection(
-        "Database=sotuken242310;Data Source=localhost;User Id=root")
+            "Database=sotuken242310;Data Source=localhost;User Id=root")
 
             Using cmd As New MySqlCommand(
-            "SELECT user_name, icon_url, bio FROM users WHERE user_id=@u", conn)
+                "SELECT user_name, icon_url, bio FROM users WHERE user_id=@u", conn)
 
                 cmd.Parameters.AddWithValue("@u", Session.CurrentUserId)
                 conn.Open()
@@ -231,9 +263,6 @@ Public Class User_mine
         End Using
 
     End Sub
-
-
-    ' ===== フォロー数 =====
     Private Sub LoadFollowCount()
 
         Using conn As New MySqlConnection(
@@ -244,29 +273,34 @@ Public Class User_mine
 
                 cmd.Parameters.AddWithValue("@u", Session.CurrentUserId)
                 conn.Open()
+
                 lbl_follow_people.Text = cmd.ExecuteScalar().ToString()
+
             End Using
         End Using
+
     End Sub
 
-    ' ===== モード切替 =====
+    ' ==============================
+    ' モード切替
+    ' ==============================
     Private Sub btn_hbtk_like_Click(sender As Object, e As EventArgs) _
         Handles btn_hbtk_like.Click
+
         currentCommentParentId = 0
         currentMode = TimelineMode.LikedPosts
         LoadTimeline()
+
     End Sub
 
     Private Sub btn_hbtk_me_Click(sender As Object, e As EventArgs) _
         Handles btn_hbtk_me.Click
+
         currentCommentParentId = 0
         currentMode = TimelineMode.MyPosts
         LoadTimeline()
+
     End Sub
-
-
-    ' ===== ボタン =====
-
     Private Sub btn_acount_setting_Click(sender As Object, e As EventArgs) _
         Handles btn_acount_setting.Click
         usrsetting_frm.Show()
@@ -301,12 +335,15 @@ Public Class User_mine
         setting.Show()
     End Sub
 
-    Private Sub lbl_follow_Click(sender As Object, e As EventArgs) Handles lbl_follow.Click
+    Private Sub lbl_follow_Click(sender As Object, e As EventArgs) _
+        Handles lbl_follow.Click
         follow_now.Show()
     End Sub
 
-    Private Sub btn_messege_Click(sender As Object, e As EventArgs) Handles btn_messege.Click
+    Private Sub btn_messege_Click(sender As Object, e As EventArgs) _
+        Handles btn_messege.Click
         s.Show()
         Me.Hide()
     End Sub
+
 End Class

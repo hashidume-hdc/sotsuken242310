@@ -12,7 +12,6 @@ Public Class sarch
 
         txt_sarchwrd.Text = "検索内容"
         txt_sarchwrd.ForeColor = Color.Gray
-
     End Sub
 
     ' ===== 検索ボタン =====
@@ -21,7 +20,7 @@ Public Class sarch
 
         Dim keyword As String = txt_sarchwrd.Text.Trim()
 
-        If String.IsNullOrEmpty(keyword) Then
+        If String.IsNullOrEmpty(keyword) OrElse keyword = "検索内容" Then
             MessageBox.Show("検索ワードを入力してください")
             Exit Sub
         End If
@@ -90,7 +89,10 @@ Public Class sarch
         For Each row As DataRow In dt.Rows
 
             Dim ctl As New tbatter_hbtk_Control()
+
+            ' 🔥 イベント接続（追加）
             AddHandler ctl.CommentRequested, AddressOf OnCommentRequested
+            AddHandler ctl.ViewRepliesRequested, AddressOf OnViewRepliesRequested
 
             ctl.SetData(
                 CInt(row("hbtk_id")),
@@ -106,7 +108,7 @@ Public Class sarch
         Next
     End Sub
 
-    ' ===== コメント遷移 =====
+    ' ===== コメントフォーム =====
     Private Sub OnCommentRequested(hbtkId As Integer)
 
         Using frm As New comment_frm(hbtkId)
@@ -118,7 +120,15 @@ Public Class sarch
 
     End Sub
 
-    ' ===== 親＋コメント =====
+    ' ===== 👀 返信を見るボタン =====
+    Private Sub OnViewRepliesRequested(hbtkId As Integer)
+
+        currentCommentParentId = hbtkId
+        LoadCommentTimeline(hbtkId)
+
+    End Sub
+
+    ' ===== 親＋コメント表示 =====
     Private Sub LoadCommentTimeline(parentId As Integer)
 
         hbtk_FlowLayout.Controls.Clear()
@@ -139,7 +149,6 @@ Public Class sarch
             "ORDER BY h.hbtk_time ASC",
             parentId,
             True)
-
     End Sub
 
     Private Sub LoadCommentPosts(sql As String, parentId As Integer, indent As Boolean)
@@ -147,7 +156,7 @@ Public Class sarch
         Dim dt As New DataTable
 
         Using conn As New MySqlConnection(
-        "Database=sotuken242310;Data Source=localhost;User Id=root")
+            "Database=sotuken242310;Data Source=localhost;User Id=root")
 
             Using cmd As New MySqlCommand(sql, conn)
                 cmd.Parameters.AddWithValue("@id", parentId)
@@ -163,15 +172,16 @@ Public Class sarch
             Dim ctl As New tbatter_hbtk_Control()
 
             AddHandler ctl.CommentRequested, AddressOf OnCommentRequested
+            AddHandler ctl.ViewRepliesRequested, AddressOf OnViewRepliesRequested
 
             ctl.SetData(
-            CInt(row("hbtk_id")),
-            CInt(row("user_id")),
-            "@" & row("user_name").ToString(),
-            row("content").ToString(),
-            row("icon_url").ToString(),
-            GetPostImages(CInt(row("hbtk_id")))
-        )
+                CInt(row("hbtk_id")),
+                CInt(row("user_id")),
+                "@" & row("user_name").ToString(),
+                row("content").ToString(),
+                row("icon_url").ToString(),
+                GetPostImages(CInt(row("hbtk_id")))
+            )
 
             If indent Then ctl.SetAsComment()
 
@@ -180,8 +190,7 @@ Public Class sarch
         Next
     End Sub
 
-
-    ' ===== 投稿画像 =====
+    ' ===== 投稿画像取得 =====
     Private Function GetPostImages(hbtkId As Integer) As List(Of String)
 
         Dim list As New List(Of String)
@@ -206,6 +215,7 @@ Public Class sarch
         Return list
     End Function
 
+    ' ===== ナビゲーション =====
     Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
         home.Show()
         Me.Hide()
@@ -234,17 +244,5 @@ Public Class sarch
         setting.Show()
         Me.Hide()
     End Sub
-    Private Sub txt_sarchwrd_Enter(sender As Object, e As EventArgs) Handles txt_sarchwrd.Enter
-        If txt_sarchwrd.ForeColor = Color.Gray Then
-            txt_sarchwrd.Text = ""
-            txt_sarchwrd.ForeColor = Color.Black
-        End If
-    End Sub
 
-    Private Sub txt_loginID_Leave(sender As Object, e As EventArgs) Handles txt_sarchwrd.Leave
-        If txt_sarchwrd.Text = "" Then
-            txt_sarchwrd.Text = "検索内容"
-            txt_sarchwrd.ForeColor = Color.Gray
-        End If
-    End Sub
 End Class

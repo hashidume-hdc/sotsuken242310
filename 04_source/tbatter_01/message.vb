@@ -35,22 +35,27 @@ Public Class s
         dgv_usr.Columns.Add(colId)
     End Sub
 
-    ' ===== ユーザー表示 =====
+    ' ===== フォロー中ユーザーのみ表示 =====
     Private Sub LoadUsers(Optional keyword As String = "")
         dgv_usr.Rows.Clear()
 
         Dim sql As String =
-            "SELECT user_id, user_name " &
-            "FROM users WHERE delete_frag=0 AND user_id<>@me "
+            "SELECT u.user_id, u.user_name " &
+            "FROM follows f " &
+            "INNER JOIN users u ON f.follower_id = u.user_id " &
+            "WHERE f.user_id = @me " &
+            "AND u.delete_frag = 0 "
 
         If keyword <> "" Then
-            sql &= "AND user_name LIKE @key "
+            sql &= "AND u.user_name LIKE @key "
         End If
 
         Using conn As New MySqlConnection(
             "Database=sotuken242310;Data Source=localhost;User Id=root")
             Using cmd As New MySqlCommand(sql, conn)
+
                 cmd.Parameters.AddWithValue("@me", Session.CurrentUserId)
+
                 If keyword <> "" Then
                     cmd.Parameters.AddWithValue("@key", "%" & keyword & "%")
                 End If
@@ -58,9 +63,11 @@ Public Class s
                 conn.Open()
                 Using rdr = cmd.ExecuteReader()
                     While rdr.Read()
-                        dgv_usr.Rows.Add(False,
-                                         rdr("user_name").ToString(),
-                                         CInt(rdr("user_id")))
+                        dgv_usr.Rows.Add(
+                            False,
+                            rdr("user_name").ToString(),
+                            CInt(rdr("user_id"))
+                        )
                     End While
                 End Using
             End Using
@@ -194,6 +201,7 @@ Public Class s
         LoadMessages()
     End Sub
 
+    ' ===== 画面遷移 =====
     Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
         home.Show()
         Me.Hide()
@@ -222,4 +230,5 @@ Public Class s
     Private Sub pic_hbtk_Click(sender As Object, e As EventArgs) Handles pic_hbtk.Click
         hbtk_frm.Show()
     End Sub
+
 End Class
