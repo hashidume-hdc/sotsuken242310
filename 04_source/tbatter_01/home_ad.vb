@@ -11,9 +11,11 @@ Public Class home_ad
 
     ' ===== フォームロード =====
     Private Sub home_ad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        selectedUserId = -1
         SetupUserGrid()
         SetupHbtkGrid()
         LoadUsers("")
+        dgv_hbtk.Rows.Clear()
     End Sub
 
     ' ===== DGV設定 =====
@@ -22,10 +24,10 @@ Public Class home_ad
         dgv_usr.Columns.Clear()
         dgv_usr.AutoGenerateColumns = False
 
-        Dim colRadio As New DataGridViewCheckBoxColumn()
-        colRadio.Name = "col_chk"
-        colRadio.Width = 30
-        dgv_usr.Columns.Add(colRadio)
+        Dim colChk As New DataGridViewCheckBoxColumn()
+        colChk.Name = "col_chk"
+        colChk.Width = 30
+        dgv_usr.Columns.Add(colChk)
 
         dgv_usr.Columns.Add("user_id", "ユーザーID")
         dgv_usr.Columns.Add("user_name", "ユーザーネーム")
@@ -56,7 +58,6 @@ Public Class home_ad
         dgv_usr.Rows.Clear()
 
         Using conn As New MySqlConnection(connectionString)
-
             Using cmd As New MySqlCommand(
                 "SELECT user_id, user_name, password, bio, delete_frag " &
                 "FROM users WHERE user_name LIKE @kw", conn)
@@ -77,14 +78,8 @@ Public Class home_ad
                             rdr("bio")
                         )
 
-                        ' 削除済みは赤表示
                         If CInt(rdr("delete_frag")) = 1 Then
                             dgv_usr.Rows(idx).DefaultCellStyle.ForeColor = Color.Red
-                        End If
-
-                        ' 選択状態復元
-                        If uid = selectedUserId Then
-                            dgv_usr.Rows(idx).Cells("col_chk").Value = True
                         End If
 
                     End While
@@ -120,11 +115,12 @@ Public Class home_ad
         If selectedUserId = -1 Then Exit Sub
 
         Using conn As New MySqlConnection(connectionString)
-
             Using cmd As New MySqlCommand(
                 "SELECT hbtk_id, content, hbtk_time " &
                 "FROM hbtks " &
-                "WHERE user_id=@uid AND pare_hbtk_id=0", conn)
+                "WHERE user_id=@uid " &
+                "AND pare_hbtk_id=0 " &
+                "AND delete_frag=0", conn)
 
                 cmd.Parameters.AddWithValue("@uid", selectedUserId)
                 conn.Open()
@@ -190,12 +186,7 @@ Public Class home_ad
 
         MessageBox.Show("アカウントを削除しました")
 
-        ' ユーザー一覧再読み込み
-        LoadUsers(txt_usr_sarch.Text.Trim())
-
-        ' 投稿も再表示
-        ReloadSelectedUserPosts()
-
+        home_ad_Load(Nothing, Nothing)
     End Sub
 
     ' ===== 投稿削除 =====
@@ -204,16 +195,19 @@ Public Class home_ad
         Dim hbtkId As Integer = -1
 
         For Each row As DataGridViewRow In dgv_hbtk.Rows
-            If CBool(row.Cells(0).Value) Then
+
+            If row.Cells(0).Value IsNot Nothing AndAlso
+               CBool(row.Cells(0).Value) = True Then
+
                 hbtkId = CInt(row.Cells("hbtk_id").Value)
                 Exit For
             End If
+
         Next
 
         If hbtkId = -1 Then Exit Sub
 
         Using conn As New MySqlConnection(connectionString)
-
             conn.Open()
 
             Using cmd As New MySqlCommand(
@@ -223,6 +217,8 @@ Public Class home_ad
                 cmd.ExecuteNonQuery()
             End Using
         End Using
+
+        MessageBox.Show("投稿を削除しました")
 
         ReloadSelectedUserPosts()
     End Sub

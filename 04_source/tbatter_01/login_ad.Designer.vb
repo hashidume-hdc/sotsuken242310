@@ -118,7 +118,7 @@ Partial Class login_ad
         Me.Controls.Add(Me.btn_login)
         Me.Controls.Add(Me.lbl_login)
         Me.Name = "login_ad"
-        Me.Text = "Form5"
+        Me.Text = "tbatter_login_ad"
         CType(Me.pic_back, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

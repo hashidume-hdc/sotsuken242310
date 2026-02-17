@@ -65,7 +65,7 @@ Public Class login
         Me.Hide()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         txt_loginID.Text = "t"
         txt_loginPswd.Text = "asdf"
     End Sub

@@ -241,9 +241,9 @@ Partial Class trend
         Me.lbl_trend.Location = New System.Drawing.Point(202, 14)
         Me.lbl_trend.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lbl_trend.Name = "lbl_trend"
-        Me.lbl_trend.Size = New System.Drawing.Size(324, 35)
+        Me.lbl_trend.Size = New System.Drawing.Size(312, 35)
         Me.lbl_trend.TabIndex = 58
-        Me.lbl_trend.Text = "今最も検索されているワード"
+        Me.lbl_trend.Text = "今最も注目されている投稿" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'dgv_trend
         '
@@ -251,7 +251,7 @@ Partial Class trend
         Me.dgv_trend.Location = New System.Drawing.Point(208, 52)
         Me.dgv_trend.Name = "dgv_trend"
         Me.dgv_trend.RowTemplate.Height = 21
-        Me.dgv_trend.Size = New System.Drawing.Size(341, 492)
+        Me.dgv_trend.Size = New System.Drawing.Size(606, 492)
         Me.dgv_trend.TabIndex = 59
         '
         'trend
@@ -259,7 +259,7 @@ Partial Class trend
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(561, 554)
+        Me.ClientSize = New System.Drawing.Size(826, 554)
         Me.Controls.Add(Me.dgv_trend)
         Me.Controls.Add(Me.lbl_trend)
         Me.Controls.Add(Me.pic_hbtk)

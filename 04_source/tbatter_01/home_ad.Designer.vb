@@ -148,7 +148,7 @@ Partial Class home_ad
         Me.Controls.Add(Me.btn_send)
         Me.Controls.Add(Me.dgv_usr)
         Me.Name = "home_ad"
-        Me.Text = "Form5"
+        Me.Text = "tbatter_home_ad"
         CType(Me.dgv_hbtk, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgv_usr, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
